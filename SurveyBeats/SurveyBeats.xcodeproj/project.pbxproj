@@ -16,6 +16,8 @@
 		B299C0A2228A908100E2FB9A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B299C0A0228A908100E2FB9A /* LaunchScreen.storyboard */; };
 		B299C0AD228A908100E2FB9A /* SurveyBeatsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B299C0AC228A908100E2FB9A /* SurveyBeatsTests.swift */; };
 		B299C0B8228A908100E2FB9A /* SurveyBeatsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B299C0B7228A908100E2FB9A /* SurveyBeatsUITests.swift */; };
+		B299C0CE228AA24A00E2FB9A /* NetworkEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = B299C0CD228AA24A00E2FB9A /* NetworkEngine.swift */; };
+		B299C0D1228AA2DD00E2FB9A /* SBURLSessionMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = B299C0D0228AA2DD00E2FB9A /* SBURLSessionMock.swift */; };
 		C4F60262B31B12825DADAD8C /* Pods_SurveyBeatsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 218E3FE6405A5E3C8C33F358 /* Pods_SurveyBeatsTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -56,6 +58,8 @@
 		B299C0B3228A908100E2FB9A /* SurveyBeatsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SurveyBeatsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B299C0B7228A908100E2FB9A /* SurveyBeatsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyBeatsUITests.swift; sourceTree = "<group>"; };
 		B299C0B9228A908100E2FB9A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B299C0CD228AA24A00E2FB9A /* NetworkEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkEngine.swift; sourceTree = "<group>"; };
+		B299C0D0228AA2DD00E2FB9A /* SBURLSessionMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SBURLSessionMock.swift; sourceTree = "<group>"; };
 		C14A7C302E18AA329A6F8CBE /* Pods-SurveyBeatsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SurveyBeatsUITests.debug.xcconfig"; path = "Target Support Files/Pods-SurveyBeatsUITests/Pods-SurveyBeatsUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		CE93F6E91D4C5B4771AB79E1 /* Pods-SurveyBeatsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SurveyBeatsTests.debug.xcconfig"; path = "Target Support Files/Pods-SurveyBeatsTests/Pods-SurveyBeatsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		F8B74312DAA5EA405ADF0C20 /* Pods_SurveyBeats.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SurveyBeats.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -99,7 +103,6 @@
 				C14A7C302E18AA329A6F8CBE /* Pods-SurveyBeatsUITests.debug.xcconfig */,
 				1B21DA3B1D0B9AEA64901D9F /* Pods-SurveyBeatsUITests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -131,6 +134,7 @@
 				B299C0C9228A919100E2FB9A /* Application */,
 				B299C0C5228A910600E2FB9A /* Controllers */,
 				B299C0CA228A91D600E2FB9A /* Storyboards */,
+				B299C0CF228AA24F00E2FB9A /* Network */,
 			);
 			path = SurveyBeats;
 			sourceTree = "<group>";
@@ -202,6 +206,23 @@
 				B299C09B228A908000E2FB9A /* Main.storyboard */,
 			);
 			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		B299C0CF228AA24F00E2FB9A /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				B299C0CD228AA24A00E2FB9A /* NetworkEngine.swift */,
+				B299C0D2228AA2E100E2FB9A /* Mock */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		B299C0D2228AA2E100E2FB9A /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				B299C0D0228AA2DD00E2FB9A /* SBURLSessionMock.swift */,
+			);
+			path = Mock;
 			sourceTree = "<group>";
 		};
 		DC0D3E49710166153D9991CC /* Frameworks */ = {
@@ -446,6 +467,8 @@
 			files = (
 				B299C09A228A908000E2FB9A /* ViewController.swift in Sources */,
 				B299C098228A908000E2FB9A /* AppDelegate.swift in Sources */,
+				B299C0CE228AA24A00E2FB9A /* NetworkEngine.swift in Sources */,
+				B299C0D1228AA2DD00E2FB9A /* SBURLSessionMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
