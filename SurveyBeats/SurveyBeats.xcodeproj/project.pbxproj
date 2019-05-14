@@ -97,12 +97,9 @@
 		B299C096228A908000E2FB9A /* SurveyBeats */ = {
 			isa = PBXGroup;
 			children = (
-				B299C097228A908000E2FB9A /* AppDelegate.swift */,
-				B299C099228A908000E2FB9A /* ViewController.swift */,
-				B299C09B228A908000E2FB9A /* Main.storyboard */,
-				B299C09E228A908100E2FB9A /* Assets.xcassets */,
-				B299C0A0228A908100E2FB9A /* LaunchScreen.storyboard */,
-				B299C0A3228A908100E2FB9A /* Info.plist */,
+				B299C0C9228A919100E2FB9A /* Application */,
+				B299C0C5228A910600E2FB9A /* Controllers */,
+				B299C0CA228A91D600E2FB9A /* Storyboards */,
 			);
 			path = SurveyBeats;
 			sourceTree = "<group>";
@@ -123,6 +120,57 @@
 				B299C0B9228A908100E2FB9A /* Info.plist */,
 			);
 			path = SurveyBeatsUITests;
+			sourceTree = "<group>";
+		};
+		B299C0C5228A910600E2FB9A /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				B299C099228A908000E2FB9A /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		B299C0C6228A914800E2FB9A /* Base.Iproj */ = {
+			isa = PBXGroup;
+			children = (
+				B299C0A0228A908100E2FB9A /* LaunchScreen.storyboard */,
+			);
+			path = Base.Iproj;
+			sourceTree = "<group>";
+		};
+		B299C0C7228A916300E2FB9A /* Infos */ = {
+			isa = PBXGroup;
+			children = (
+				B299C0A3228A908100E2FB9A /* Info.plist */,
+			);
+			path = Infos;
+			sourceTree = "<group>";
+		};
+		B299C0C8228A917500E2FB9A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B299C09E228A908100E2FB9A /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		B299C0C9228A919100E2FB9A /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				B299C097228A908000E2FB9A /* AppDelegate.swift */,
+				B299C0C8228A917500E2FB9A /* Resources */,
+				B299C0C6228A914800E2FB9A /* Base.Iproj */,
+				B299C0C7228A916300E2FB9A /* Infos */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		B299C0CA228A91D600E2FB9A /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				B299C09B228A908000E2FB9A /* Main.storyboard */,
+			);
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -434,7 +482,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = NGVV4YCSE8;
-				INFOPLIST_FILE = SurveyBeats/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/SurveyBeats/Application/Infos/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -452,7 +500,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = NGVV4YCSE8;
-				INFOPLIST_FILE = SurveyBeats/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/SurveyBeats/Application/Infos/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
