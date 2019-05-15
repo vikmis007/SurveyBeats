@@ -8,10 +8,19 @@
 
 import UIKit
 
+let SURVEY_LIST_CELL_IDENTIFIER = "SurveyListCollectionViewCellIdentifier"
+let SURVEY_LIST_CELL_NAME = "SurveyListCollectionViewCell"
+
 class SBSurveyListViewController: UIViewController {
+    
+    
+    @IBOutlet weak var collectionView: UICollectionView!
     
     /// Presenter instance
     private var presenter: SurveyListPresenter!
+    
+    /// array of model object to hold most popular articles
+    lazy var surveyListItems: [SurveyType] = [SurveyType]()
     
     /// To be injected in API call
     var urlSesssion: SBURLSession?
@@ -19,12 +28,19 @@ class SBSurveyListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        configureCollectionView()
         configureViewController()
         presenter.loadSurveyList()
     }
     
     func configureViewController() {
         configurePresenter()
+    }
+    
+    func configureCollectionView() {
+        collectionView.delegate = self
+        collectionView.dataSource = self
+        collectionView.register(UINib(nibName: SURVEY_LIST_CELL_NAME, bundle: nil), forCellWithReuseIdentifier: SURVEY_LIST_CELL_IDENTIFIER)
     }
     
     private func configurePresenter() {

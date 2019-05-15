@@ -10,7 +10,8 @@ import Foundation
 
 extension SBSurveyListViewController: SurveyListPresenterProtocol {
     func reloadViewWithSurveyItemList(_ surveyList: [SurveyType]) {
-        
+        surveyListItems = surveyList
+        collectionView.reloadData()
     }
     
     func failedToLoadSurveyItemList(_ error: Error?) {
