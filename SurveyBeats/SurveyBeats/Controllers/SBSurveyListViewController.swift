@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MBProgressHUD
 
 let SURVEY_LIST_CELL_IDENTIFIER = "SurveyListCollectionViewCellIdentifier"
 let SURVEY_LIST_CELL_NAME = "SurveyListCollectionViewCell"
@@ -26,11 +27,17 @@ class SBSurveyListViewController: UIViewController {
     /// To be injected in API call
     var urlSesssion: SBURLSession?
 
+    @IBOutlet weak var refreshBtn: UIBarButtonItem!
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        navigationItem.leftBarButtonItem?.isEnabled = false
+        
         configureCollectionView()
         configureViewController()
+        presenter.loadSurveyList()
+    }
+    @IBAction func refreshSurveyListTapped(_ sender: Any) {
         presenter.loadSurveyList()
     }
     
@@ -47,6 +54,18 @@ class SBSurveyListViewController: UIViewController {
     private func configurePresenter() {
         presenter =  SurveyListPresenter(urlSession: urlSesssion)
         presenter.delegate = self
+    }
+    
+    /// Method to show loading indicator.
+    func showLoadingIndicator() {
+        let hud = MBProgressHUD.showAdded(to: self.view, animated: true)
+        hud.mode = MBProgressHUDMode.indeterminate
+        hud.isUserInteractionEnabled = false
+    }
+    
+    /// Method to hide loading indicator.
+    func hideLoadingIndicator() {
+        MBProgressHUD.hide(for: self.view, animated: true)
     }
     
 }

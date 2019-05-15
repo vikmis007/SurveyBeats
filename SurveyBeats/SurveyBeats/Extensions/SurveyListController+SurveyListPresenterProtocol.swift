@@ -19,6 +19,12 @@ extension SBSurveyListViewController: SurveyListPresenterProtocol {
     }
     
     func showLoadingIndicator(_ shouldShow: Bool) {
-        
+        if shouldShow {
+            showLoadingIndicator()
+            navigationItem.leftBarButtonItem?.isEnabled = false
+        } else {
+            hideLoadingIndicator()
+            navigationItem.leftBarButtonItem?.isEnabled = true
+        }
     }
 }

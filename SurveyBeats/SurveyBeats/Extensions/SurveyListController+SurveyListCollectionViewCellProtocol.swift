@@ -13,6 +13,5 @@ extension SBSurveyListViewController: SurveyListCollectionViewCellProtocol {
         guard let takeSurveyViewController: SBTakeSurveyViewController = storyboard?.instantiateViewController(withIdentifier: TAKE_SURVEY_IDENTIFIER) as? SBTakeSurveyViewController else { return }
         takeSurveyViewController.surveyTitle = title
         self.navigationController?.show(takeSurveyViewController, sender: nil)
-        
     }
 }

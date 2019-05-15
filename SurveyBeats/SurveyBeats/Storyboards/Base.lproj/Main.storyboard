@@ -39,9 +39,16 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Wse-tC-8Wg"/>
+                    <navigationItem key="navigationItem" id="Wse-tC-8Wg">
+                        <barButtonItem key="leftBarButtonItem" systemItem="refresh" id="n1M-xb-fVn">
+                            <connections>
+                                <action selector="refreshSurveyListTapped:" destination="BYZ-38-t0r" id="Vbz-1G-zb2"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="collectionView" destination="UxA-me-svH" id="o3P-k9-Zcq"/>
+                        <outlet property="refreshBtn" destination="n1M-xb-fVn" id="8vO-Eu-5s9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
