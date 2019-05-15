@@ -24,6 +24,10 @@ extension SBSurveyListViewController: UICollectionViewDataSource, UICollectionVi
         
     }
     
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        updatePageControlCurrentIndex(Int(scrollView.contentOffset.y) / Int(scrollView.frame.height))
+    }
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: self.collectionView.bounds.width, height: self.collectionView.bounds.height)
     }

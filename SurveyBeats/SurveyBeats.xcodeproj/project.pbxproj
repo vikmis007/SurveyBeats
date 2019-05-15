@@ -82,7 +82,6 @@
 		B299C0E4228BDB0100E2FB9A /* SurveyListPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyListPresenterProtocol.swift; sourceTree = "<group>"; };
 		B299C0E7228BDD8900E2FB9A /* SBSurveyListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SBSurveyListViewController.swift; sourceTree = "<group>"; };
 		B299C0E9228BDF0500E2FB9A /* SurveyListController+SurveyListPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SurveyListController+SurveyListPresenterProtocol.swift"; sourceTree = "<group>"; };
-		B299C0EC228BF0AA00E2FB9A /* SurveyBeats.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SurveyBeats.entitlements; sourceTree = "<group>"; };
 		B299C0ED228BF2A800E2FB9A /* SurveyListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyListCollectionViewCell.swift; sourceTree = "<group>"; };
 		B299C0EE228BF2A800E2FB9A /* SurveyListCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SurveyListCollectionViewCell.xib; sourceTree = "<group>"; };
 		B299C0F2228BF66500E2FB9A /* SurveyListController+CollectionViewDatasourceDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SurveyListController+CollectionViewDatasourceDelegate.swift"; sourceTree = "<group>"; };
@@ -160,7 +159,6 @@
 		B299C096228A908000E2FB9A /* SurveyBeats */ = {
 			isa = PBXGroup;
 			children = (
-				B299C0EC228BF0AA00E2FB9A /* SurveyBeats.entitlements */,
 				B299C0C9228A919100E2FB9A /* Application */,
 				B299C0C5228A910600E2FB9A /* Controllers */,
 				B299C0EB228BDF0B00E2FB9A /* Extensions */,

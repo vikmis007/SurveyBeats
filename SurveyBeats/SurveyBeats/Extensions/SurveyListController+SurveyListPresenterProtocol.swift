@@ -13,6 +13,8 @@ extension SBSurveyListViewController: SurveyListPresenterProtocol {
     func reloadViewWithSurveyItemList(_ surveyList: [SurveyType]) {
         surveyListItems = surveyList
         collectionView.reloadData()
+        pageControl?.numberOfElements = surveyListItems.count
+        self.collectionView.contentOffset = CGPoint(x: 0, y: 0)
     }
     
     func failedToLoadSurveyItemList(_ error: Error?) {
