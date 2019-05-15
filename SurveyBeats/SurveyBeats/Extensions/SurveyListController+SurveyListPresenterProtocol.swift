@@ -14,10 +14,10 @@ extension SBSurveyListViewController: SurveyListPresenterProtocol {
         surveyListItems = surveyList
         collectionView.reloadData()
         pageControl?.numberOfElements = surveyListItems.count
+        self.collectionView.contentOffset = CGPoint(x: 0, y: 0)
     }
     
     func failedToLoadSurveyItemList(_ error: Error?) {
-        pageControl?.numberOfElements = 0
         let alert = UIAlertController(title: SBStringConstants.kEmptyString, message: SBStringConstants.kGenericErrorMessage, preferredStyle: .alert)
         let okAction = UIAlertAction(title: SBStringConstants.kOkTitleString, style: .default, handler: nil)
         alert.addAction(okAction)
