@@ -20,8 +20,13 @@ extension SBSurveyListViewController: UICollectionViewDataSource, UICollectionVi
         }
         cell.updateCellRecordWith(survey: surveyListItems[indexPath.row])
         cell.delegate = self
+        //updatePageControlCurrentIndex(indexPath.row)
         return cell
         
+    }
+    
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        updatePageControlCurrentIndex(Int(scrollView.contentOffset.y) / Int(scrollView.frame.height))
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
