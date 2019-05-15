@@ -29,6 +29,9 @@ class SBSurveyListViewController: UIViewController {
     var urlSesssion: SBURLSession?
     
     var pageControl: CMPageControl?
+    
+    /// to catch any error generated in service calls
+    var error: Error?
 
     @IBOutlet weak var refreshBtn: UIBarButtonItem!
     override func viewDidLoad() {
@@ -36,10 +39,8 @@ class SBSurveyListViewController: UIViewController {
         
         navigationItem.leftBarButtonItem?.isEnabled = false
         
-        configurePageControl()
-        configureCollectionView()
-        configureViewController()
-        presenter.loadSurveyList()
+        initialSetup()
+        
     }
     @IBAction func refreshSurveyListTapped(_ sender: Any) {
         presenter.loadSurveyList()
@@ -60,8 +61,11 @@ class SBSurveyListViewController: UIViewController {
         view.addSubview(self.pageControl!)
     }
     
-    func configureViewController() {
+    func initialSetup() {
+        configurePageControl()
         configurePresenter()
+        configureCollectionView()
+        presenter.loadSurveyList()
     }
     
     func configureCollectionView() {
