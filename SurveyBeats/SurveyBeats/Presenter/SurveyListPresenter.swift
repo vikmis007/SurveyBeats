@@ -10,7 +10,7 @@ import UIKit
 
 
 class SurveyListPresenter: NSObject {
-    private var surveyListService: SurveyListService?
+    lazy private var surveyListService: SurveyListService = SurveyListService()
     
     /// Delegate property for ForecastListPresenterProtocol
     weak var delegate: SurveyListPresenterProtocol?
@@ -26,7 +26,7 @@ class SurveyListPresenter: NSObject {
     func loadSurveyList() {
         delegate?.showLoadingIndicator(true)
         
-        surveyListService?.fetchSurveyFeed(completion: { [weak self] (surveyListItem) in
+        surveyListService.fetchSurveyFeed(completion: { [weak self] (surveyListItem) in
             DispatchQueue.main.async {
                 self?.delegate?.showLoadingIndicator(false)
             }

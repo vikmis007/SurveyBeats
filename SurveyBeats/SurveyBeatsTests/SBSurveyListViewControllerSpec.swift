@@ -85,8 +85,9 @@ class SBSurveyListViewControllerSpec: QuickSpec {
             
             let sessionMock = URLSessionMock(data: data, response: urlResponse, error: error)
             self.systemUnderTest.urlSesssion = sessionMock
-            
+            SBUtil.setAccessToken(token: "dummy")
             self.systemUnderTest.initialSetup()
+            SBUtil.setAccessToken(token: nil)
             expect((self.systemUnderTest.error as NSError?)?.code ?? 400).toEventually(equal(400))
         })
     }
@@ -121,7 +122,9 @@ class SBSurveyListViewControllerSpec: QuickSpec {
             let sessionMock = URLSessionMock(data: data, response: urlResponse, error: nil)
             self.systemUnderTest.urlSesssion = sessionMock
             
+            SBUtil.setAccessToken(token: "dummy")
             self.systemUnderTest.initialSetup()
+            SBUtil.setAccessToken(token: nil)
             expect(self.systemUnderTest.surveyListItems.count).toEventually(equal(5))
         })
     }

@@ -7,7 +7,6 @@ target 'SurveyBeats' do
   pod 'SDWebImage'
   pod 'MBProgressHUD', '~> 1.1.0'
   pod 'CMPageControl'
-  pod 'SwiftKeychainWrapper'
   # Pods for SurveyBeats
 
   target 'SurveyBeatsTests' do
@@ -18,7 +17,10 @@ target 'SurveyBeats' do
 
   target 'SurveyBeatsUITests' do
     inherit! :search_paths
-    # Pods for testing
+    use_frameworks!
+    pod 'SDWebImage'
+    pod 'MBProgressHUD', '~> 1.1.0'
+    pod 'CMPageControl'
   end
 
 end

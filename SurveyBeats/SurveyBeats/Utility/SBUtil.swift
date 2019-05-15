@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import SwiftKeychainWrapper
 
 class SBUtil {
     static func getPostRequestStringForFormData(params:[String: Any]) -> String {
@@ -19,7 +18,7 @@ class SBUtil {
         return data.map { String($0) }.joined(separator: "&")
     }
     
-    static func setAccessToken(token: String) {
+    static func setAccessToken(token: String?) {
         UserDefaults.standard.set(token, forKey: SBStringConstants.kAccessTokenKey)
         
     }
