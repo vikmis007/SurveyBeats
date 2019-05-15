@@ -10,6 +10,7 @@ import UIKit
 
 let SURVEY_LIST_CELL_IDENTIFIER = "SurveyListCollectionViewCellIdentifier"
 let SURVEY_LIST_CELL_NAME = "SurveyListCollectionViewCell"
+let TAKE_SURVEY_IDENTIFIER = "SBTakeSurveyViewControllerIdentifier"
 
 class SBSurveyListViewController: UIViewController {
     

@@ -18,6 +18,8 @@ class SurveyListCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var takeSurveyBtn: UIButton!
     
+    weak var delegate: SurveyListCollectionViewCellProtocol!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         takeSurveyBtn.clipsToBounds = true
@@ -38,5 +40,6 @@ class SurveyListCollectionViewCell: UICollectionViewCell {
     }
 
     @IBAction func takeSurveyButtonTapped(_ sender: Any) {
+        delegate.didTapTakeSurveyWith(title: titleLabel.text ?? "")
     }
 }

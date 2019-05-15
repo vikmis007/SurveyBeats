@@ -19,6 +19,7 @@ extension SBSurveyListViewController: UICollectionViewDataSource, UICollectionVi
             return UICollectionViewCell()
         }
         cell.updateCellRecordWith(survey: surveyListItems[indexPath.row])
+        cell.delegate = self
         return cell
         
     }
