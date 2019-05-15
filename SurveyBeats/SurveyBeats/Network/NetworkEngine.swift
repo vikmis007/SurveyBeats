@@ -40,8 +40,8 @@ final class NetworkEngine: NSObject {
     /// - Parameters:
     ///   - urlRequest: url request for the post request
     ///   - completion: completion handler to process response/error received from the post request
-    public func post(urlRequest: URLRequest, completion: @escaping NetworkEngineCompletionHandler) {
-        urlSession.dataTask(with: urlRequest) { (data, _, error) in
+    public func post(request: URLRequest, completion: @escaping NetworkEngineCompletionHandler) {
+        urlSession.dataTask(with: request) { (data, _, error) in
             completion(data, error)
         }.resume()
     }

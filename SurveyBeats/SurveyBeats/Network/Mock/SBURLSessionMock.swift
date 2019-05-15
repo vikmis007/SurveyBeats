@@ -28,7 +28,7 @@ public protocol SBURLSession {
     ///   - completionHandler: completion handler
     /// - Returns: URLSessionDataTask mocked object
     func dataTask(
-        with urlRequest: URLRequest,
+        with request: URLRequest,
         completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void) -> URLSessionDataTask
 }
 
@@ -76,9 +76,9 @@ public final class URLSessionMock: SBURLSession {
     ///   - completionHandler: completionHandler
     /// - Returns: datatask object
     public func dataTask(
-        with urlRequest: URLRequest,
+        with request: URLRequest,
         completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void) -> URLSessionDataTask {
-        self.urlRequest = urlRequest
+        self.request = request
         self.dataTaskMock.completionHandler = completionHandler
         return self.dataTaskMock
     }
