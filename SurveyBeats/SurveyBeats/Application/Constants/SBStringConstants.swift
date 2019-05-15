@@ -33,4 +33,9 @@ struct SBStringConstants {
     // HTTP methods constant
     static let kHTTPMethodPost = "POST"
     static let kHTTPMethodGet = "GET"
+    
+    // Generic string constants
+    static let kEmptyString = ""
+    static let kOkTitleString = "OK"
+    static let kGenericErrorMessage = "Something went wrong. Please try again !!"
 }
