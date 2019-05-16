@@ -13,17 +13,17 @@ typealias NetworkEngineCompletionHandler = (_ data: Data?, _ error: Error?) -> V
 
 /// This is a factory class to handle API calls
 final class NetworkEngine: NSObject {
-    
+
     /// To create a url session for API call
     private var urlSession: SBURLSession!
-    
+
     /// To initialise network engine with url session
     ///
     /// - Parameter urlSession: urlsession used for initialisation
     init(urlSession: SBURLSession?) {
         self.urlSession = urlSession ?? URLSession.shared
     }
-    
+
     /// To execute get request
     ///
     /// - Parameters:
@@ -34,7 +34,7 @@ final class NetworkEngine: NSObject {
             completion(data, error)
             }.resume()
     }
-    
+
     /// To execute post request
     ///
     /// - Parameters:
@@ -46,4 +46,3 @@ final class NetworkEngine: NSObject {
         }.resume()
     }
 }
-

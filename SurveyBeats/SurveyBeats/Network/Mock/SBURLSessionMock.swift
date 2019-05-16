@@ -10,7 +10,7 @@ import Foundation
 
 /// Protocol to provide data task delegate method, to be used while mocking
 public protocol SBURLSession {
-    
+
     /// Mocked datatask delegate method, to be used while testing
     ///
     /// - Parameters:
@@ -20,7 +20,7 @@ public protocol SBURLSession {
     func dataTask(
         with url: URL,
         completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void) -> URLSessionDataTask
-    
+
     /// Mocked datatask delegate method, to be used while testing post request
     ///
     /// - Parameters:
@@ -37,16 +37,16 @@ extension URLSession: SBURLSession { }
 
 /// Class to create mock URLSession
 public final class URLSessionMock: SBURLSession {
-    
+
     /// Mocked url
     var url: URL?
-    
+
     /// URLRequest to be framed
     var request: URLRequest?
-    
+
     /// Mocked datatask reference
     private let dataTaskMock: URLSessionDataTaskMock
-    
+
     /// Initializer for the class
     public init(data: Data? = nil, response: URLResponse? = nil, error: Error? = nil) {
         dataTaskMock = URLSessionDataTaskMock()
@@ -54,7 +54,7 @@ public final class URLSessionMock: SBURLSession {
         dataTaskMock.taskResponse = response
         dataTaskMock.taskError = error
     }
-    
+
     /// Mocked datatask method
     ///
     /// - Parameters:
@@ -68,7 +68,7 @@ public final class URLSessionMock: SBURLSession {
         self.dataTaskMock.completionHandler = completionHandler
         return self.dataTaskMock
     }
-    
+
     /// Mocked datatask method for post request
     ///
     /// - Parameters:
@@ -82,27 +82,27 @@ public final class URLSessionMock: SBURLSession {
         self.dataTaskMock.completionHandler = completionHandler
         return self.dataTaskMock
     }
-    
+
 }
 
 /// URLSessionDataTask mock class
 final private class URLSessionDataTaskMock: URLSessionDataTask {
-    
+
     /// Typealias for completion handler
     typealias CompletionHandler = (Data?, URLResponse?, Error?) -> Void
-    
+
     /// Reference to the completion handler
     var completionHandler: CompletionHandler?
-    
+
     /// Recieved data
     var taskData: Data?
-    
+
     /// Recieved URLResponse
     var taskResponse: URLResponse?
-    
+
     /// Recieved error
     var taskError: Error?
-    
+
     /// Overriding resume function from datatask request
     override func resume() {
         DispatchQueue.main.async {
@@ -110,5 +110,3 @@ final private class URLSessionDataTaskMock: URLSessionDataTask {
         }
     }
 }
-
-
