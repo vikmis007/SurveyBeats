@@ -7,9 +7,9 @@
 <body>
 <header><div class="row"><a href="index.html"><img src="logo.jpg" alt="Slather logo"></a></div></header><div class="row"><div id="reports">
 <h2 class="cov_title">
-<span>Coverage for "AppDelegate.swift" : </span><span class="cov_low">41.67%</span>
+<span>Coverage for "AppDelegate.swift" : </span><span class="cov_medium">83.33%</span>
 </h2>
-<h4 class="cov_subtitle">(10 of 24 relevant lines covered)</h4>
+<h4 class="cov_subtitle">(20 of 24 relevant lines covered)</h4>
 <h4 class="cov_filepath">SurveyBeats/Application/AppDelegate.swift</h4>
 <table class="source_code">
 <tr class="never">
@@ -89,133 +89,133 @@
 </tr>
 <tr class="never">
 <td class="num">16</td>
-<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="src"><pre><code class="objc">    func application(</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">17</td>
+<td class="src"><pre><code class="objc">        _ application: UIApplication,</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">18</td>
+<td class="src"><pre><code class="objc">        didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?</code></pre></td>
 <td class="coverage"></td>
 </tr>
 <tr class="covered">
-<td class="num">17</td>
-<td class="src"><pre><code class="objc">    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -&gt; Bool {</code></pre></td>
-<td class="coverage">1x</td>
-</tr>
-<tr class="covered">
-<td class="num">18</td>
-<td class="src"><pre><code class="objc">        UINavigationBar.appearance().barTintColor = UIColor(red: 15.0/255.0, green: 21.0/255.0, blue: 40.0/255.0, alpha: 1.0)</code></pre></td>
-<td class="coverage">1x</td>
-</tr>
-<tr class="covered">
 <td class="num">19</td>
-<td class="src"><pre><code class="objc">        UINavigationBar.appearance().tintColor = UIColor.white</code></pre></td>
+<td class="src"><pre><code class="objc">        ) -&gt; Bool {</code></pre></td>
 <td class="coverage">1x</td>
 </tr>
 <tr class="covered">
 <td class="num">20</td>
-<td class="src"><pre><code class="objc">        UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor : UIColor.white]</code></pre></td>
+<td class="src"><pre><code class="objc"></code></pre></td>
 <td class="coverage">1x</td>
 </tr>
 <tr class="covered">
 <td class="num">21</td>
-<td class="src"><pre><code class="objc">        UIBarButtonItem.appearance().tintColor = UIColor.white</code></pre></td>
+<td class="src"><pre><code class="objc">        // Change navigation bar tint color throughout the app</code></pre></td>
 <td class="coverage">1x</td>
 </tr>
 <tr class="covered">
 <td class="num">22</td>
-<td class="src"><pre><code class="objc">        return true</code></pre></td>
+<td class="src"><pre><code class="objc">        UINavigationBar.appearance().barTintColor = UIColor(</code></pre></td>
 <td class="coverage">1x</td>
 </tr>
 <tr class="covered">
 <td class="num">23</td>
-<td class="src"><pre><code class="objc">    }</code></pre></td>
+<td class="src"><pre><code class="objc">            red: 15.0/255.0, green: 21.0/255.0, blue: 40.0/255.0, alpha: 1.0</code></pre></td>
 <td class="coverage">1x</td>
 </tr>
-<tr class="never">
+<tr class="covered">
 <td class="num">24</td>
-<td class="src"><pre><code class="objc"></code></pre></td>
-<td class="coverage"></td>
+<td class="src"><pre><code class="objc">        )</code></pre></td>
+<td class="coverage">1x</td>
 </tr>
-<tr class="missed">
+<tr class="covered">
 <td class="num">25</td>
-<td class="src"><pre><code class="objc">    func applicationWillResignActive(_ application: UIApplication) {</code></pre></td>
-<td class="coverage">!</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage">1x</td>
 </tr>
-<tr class="missed">
+<tr class="covered">
 <td class="num">26</td>
-<td class="src"><pre><code class="objc">        // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.</code></pre></td>
-<td class="coverage">!</td>
+<td class="src"><pre><code class="objc">        // Change navigation bar item's color throughout the app</code></pre></td>
+<td class="coverage">1x</td>
 </tr>
-<tr class="missed">
+<tr class="covered">
 <td class="num">27</td>
-<td class="src"><pre><code class="objc">        // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.</code></pre></td>
-<td class="coverage">!</td>
+<td class="src"><pre><code class="objc">        UINavigationBar.appearance().tintColor = UIColor.white</code></pre></td>
+<td class="coverage">1x</td>
 </tr>
-<tr class="missed">
+<tr class="covered">
 <td class="num">28</td>
-<td class="src"><pre><code class="objc">    }</code></pre></td>
-<td class="coverage">!</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage">1x</td>
 </tr>
-<tr class="never">
+<tr class="covered">
 <td class="num">29</td>
-<td class="src"><pre><code class="objc"></code></pre></td>
-<td class="coverage"></td>
+<td class="src"><pre><code class="objc">        // Change navigation bar text color throughout the app</code></pre></td>
+<td class="coverage">1x</td>
 </tr>
-<tr class="missed">
+<tr class="covered">
 <td class="num">30</td>
-<td class="src"><pre><code class="objc">    func applicationDidEnterBackground(_ application: UIApplication) {</code></pre></td>
-<td class="coverage">!</td>
+<td class="src"><pre><code class="objc">        UINavigationBar.appearance().titleTextAttributes = [</code></pre></td>
+<td class="coverage">1x</td>
 </tr>
-<tr class="missed">
+<tr class="covered">
 <td class="num">31</td>
-<td class="src"><pre><code class="objc">        // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.</code></pre></td>
-<td class="coverage">!</td>
+<td class="src"><pre><code class="objc">            NSAttributedString.Key.foregroundColor: UIColor.white</code></pre></td>
+<td class="coverage">1x</td>
 </tr>
-<tr class="missed">
+<tr class="covered">
 <td class="num">32</td>
-<td class="src"><pre><code class="objc">        // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.</code></pre></td>
-<td class="coverage">!</td>
+<td class="src"><pre><code class="objc">        ]</code></pre></td>
+<td class="coverage">1x</td>
 </tr>
-<tr class="missed">
+<tr class="covered">
 <td class="num">33</td>
-<td class="src"><pre><code class="objc">    }</code></pre></td>
-<td class="coverage">!</td>
-</tr>
-<tr class="never">
-<td class="num">34</td>
 <td class="src"><pre><code class="objc"></code></pre></td>
-<td class="coverage"></td>
+<td class="coverage">1x</td>
 </tr>
-<tr class="missed">
+<tr class="covered">
+<td class="num">34</td>
+<td class="src"><pre><code class="objc">        // Change navigation bar button's tint color throughout the app</code></pre></td>
+<td class="coverage">1x</td>
+</tr>
+<tr class="covered">
 <td class="num">35</td>
-<td class="src"><pre><code class="objc">    func applicationWillEnterForeground(_ application: UIApplication) {</code></pre></td>
-<td class="coverage">!</td>
+<td class="src"><pre><code class="objc">        UIBarButtonItem.appearance().tintColor = UIColor.white</code></pre></td>
+<td class="coverage">1x</td>
 </tr>
-<tr class="missed">
+<tr class="covered">
 <td class="num">36</td>
-<td class="src"><pre><code class="objc">        // Called as part of the transition from the background to the active state; here you can undo many of the changes made on entering the background.</code></pre></td>
-<td class="coverage">!</td>
+<td class="src"><pre><code class="objc">        return true</code></pre></td>
+<td class="coverage">1x</td>
 </tr>
-<tr class="missed">
+<tr class="covered">
 <td class="num">37</td>
 <td class="src"><pre><code class="objc">    }</code></pre></td>
-<td class="coverage">!</td>
+<td class="coverage">1x</td>
 </tr>
 <tr class="never">
 <td class="num">38</td>
 <td class="src"><pre><code class="objc"></code></pre></td>
 <td class="coverage"></td>
 </tr>
-<tr class="covered">
+<tr class="missed">
 <td class="num">39</td>
-<td class="src"><pre><code class="objc">    func applicationDidBecomeActive(_ application: UIApplication) {</code></pre></td>
-<td class="coverage">1x</td>
+<td class="src"><pre><code class="objc">    func applicationWillResignActive(_ application: UIApplication) { }</code></pre></td>
+<td class="coverage">!</td>
 </tr>
-<tr class="covered">
+<tr class="never">
 <td class="num">40</td>
-<td class="src"><pre><code class="objc">        // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.</code></pre></td>
-<td class="coverage">1x</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
 </tr>
-<tr class="covered">
+<tr class="missed">
 <td class="num">41</td>
-<td class="src"><pre><code class="objc">    }</code></pre></td>
-<td class="coverage">1x</td>
+<td class="src"><pre><code class="objc">    func applicationDidEnterBackground(_ application: UIApplication) { }</code></pre></td>
+<td class="coverage">!</td>
 </tr>
 <tr class="never">
 <td class="num">42</td>
@@ -224,37 +224,37 @@
 </tr>
 <tr class="missed">
 <td class="num">43</td>
-<td class="src"><pre><code class="objc">    func applicationWillTerminate(_ application: UIApplication) {</code></pre></td>
+<td class="src"><pre><code class="objc">    func applicationWillEnterForeground(_ application: UIApplication) { }</code></pre></td>
 <td class="coverage">!</td>
 </tr>
-<tr class="missed">
+<tr class="never">
 <td class="num">44</td>
-<td class="src"><pre><code class="objc">        // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.</code></pre></td>
-<td class="coverage">!</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="coverage"></td>
 </tr>
-<tr class="missed">
+<tr class="covered">
 <td class="num">45</td>
-<td class="src"><pre><code class="objc">    }</code></pre></td>
-<td class="coverage">!</td>
+<td class="src"><pre><code class="objc">    func applicationDidBecomeActive(_ application: UIApplication) { }</code></pre></td>
+<td class="coverage">1x</td>
 </tr>
 <tr class="never">
 <td class="num">46</td>
 <td class="src"><pre><code class="objc"></code></pre></td>
 <td class="coverage"></td>
 </tr>
-<tr class="never">
+<tr class="missed">
 <td class="num">47</td>
-<td class="src"><pre><code class="objc"></code></pre></td>
-<td class="coverage"></td>
+<td class="src"><pre><code class="objc">    func applicationWillTerminate(_ application: UIApplication) { }</code></pre></td>
+<td class="coverage">!</td>
 </tr>
 <tr class="never">
 <td class="num">48</td>
-<td class="src"><pre><code class="objc">}</code></pre></td>
+<td class="src"><pre><code class="objc"></code></pre></td>
 <td class="coverage"></td>
 </tr>
 <tr class="never">
 <td class="num">49</td>
-<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="src"><pre><code class="objc">}</code></pre></td>
 <td class="coverage"></td>
 </tr>
 </table>

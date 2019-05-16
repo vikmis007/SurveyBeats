@@ -8,10 +8,14 @@
 
 import UIKit
 
+// MARK: - SurveyListController's presenter class
 class SurveyListPresenter: NSObject {
+
+    // MARK: - Instance variables
+    /// Survey list service class' instance
     lazy private var surveyListService: SurveyListService = SurveyListService()
 
-    /// Delegate property for ForecastListPresenterProtocol
+    /// Delegate property for SurveyListPresenterProtocol
     weak var delegate: SurveyListPresenterProtocol?
 
     /// convenience initilizer

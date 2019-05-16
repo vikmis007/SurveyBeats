@@ -18,13 +18,20 @@ default_platform(:ios)
 platform :ios do
   desc "Unit_test, code_coverage"
   lane :development do
-    scan(
+
+   swiftlint(
+      mode: :lint,      # SwiftLint mode: :lint (default) or :autocorrect
+      output_file: "LintReport.html",   # The path of the output file (optional)
+      reporter: "html",
+      ignore_exit_status: true    # Allow fastlane to continue even if SwiftLint returns a non-zero exit status
+  )
+  scan(
        scheme: "SurveyBeats",
        clean: true,
        code_coverage: true,
        device: "iPhone 6s",
    )
-    slather(
+   slather(
        input_format: "auto",
        scheme: "SurveyBeats",
        workspace: "SurveyBeats.xcworkspace",

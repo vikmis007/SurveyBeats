@@ -8,11 +8,13 @@
 
 import UIKit
 
+/// Enum to provide formatted API response
 enum SurveyListFeedResult {
-    /// For successful fetching of feed.`
+
+    /// For successful fetching of survey
     case success(surveyListData: [SurveyType])
 
-    /// For error while fetching of feed.
+    /// For error while fetching of survey.
     /// - error: Error that occurred.
     case error(error: Error)
 
@@ -23,9 +25,12 @@ enum SurveyListFeedResult {
     case unknownError
 }
 
+/// Typealias for API request completion
 typealias SurveyListFeedCompletionHandler = (_ result: SurveyListFeedResult) -> Void
 
+// MARK: - Service class for maintaining survey list from API
 class SurveyListService: NSObject {
+
     /// API url component instance
     private var urlComponents: URLComponents!
 
@@ -48,6 +53,11 @@ class SurveyListService: NSObject {
         ]
     }
 
+    /// Fetch survery list with provided token
+    ///
+    /// - Parameters:
+    ///   - token: access token
+    ///   - completion: API completion block
     private func fetchSurveyFeedWith(token: String, completion: @escaping SurveyListFeedCompletionHandler) {
 
         self.urlComponents.queryItems = [

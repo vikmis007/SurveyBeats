@@ -7,9 +7,9 @@
 <body>
 <header><div class="row"><a href="index.html"><img src="logo.jpg" alt="Slather logo"></a></div></header><div class="row"><div id="reports">
 <h2 class="cov_title">
-<span>Coverage for "NetworkEngine.swift" : </span><span class="cov_medium">84.62%</span>
+<span>Coverage for "NetworkEngine.swift" : </span><span class="cov_high">100.00%</span>
 </h2>
-<h4 class="cov_subtitle">(11 of 13 relevant lines covered)</h4>
+<h4 class="cov_subtitle">(13 of 13 relevant lines covered)</h4>
 <h4 class="cov_filepath">SurveyBeats/Network/NetworkEngine.swift</h4>
 <table class="source_code">
 <tr class="never">
@@ -89,7 +89,7 @@
 </tr>
 <tr class="never">
 <td class="num">16</td>
-<td class="src"><pre><code class="objc">    </code></pre></td>
+<td class="src"><pre><code class="objc"></code></pre></td>
 <td class="coverage"></td>
 </tr>
 <tr class="never">
@@ -104,7 +104,7 @@
 </tr>
 <tr class="never">
 <td class="num">19</td>
-<td class="src"><pre><code class="objc">    </code></pre></td>
+<td class="src"><pre><code class="objc"></code></pre></td>
 <td class="coverage"></td>
 </tr>
 <tr class="never">
@@ -125,21 +125,21 @@
 <tr class="covered">
 <td class="num">23</td>
 <td class="src"><pre><code class="objc">    init(urlSession: SBURLSession?) {</code></pre></td>
-<td class="coverage">5x</td>
+<td class="coverage">6x</td>
 </tr>
 <tr class="covered">
 <td class="num">24</td>
 <td class="src"><pre><code class="objc">        self.urlSession = urlSession ?? URLSession.shared</code></pre></td>
-<td class="coverage">5x</td>
+<td class="coverage">6x</td>
 </tr>
 <tr class="covered">
 <td class="num">25</td>
 <td class="src"><pre><code class="objc">    }</code></pre></td>
-<td class="coverage">5x</td>
+<td class="coverage">6x</td>
 </tr>
 <tr class="never">
 <td class="num">26</td>
-<td class="src"><pre><code class="objc">    </code></pre></td>
+<td class="src"><pre><code class="objc"></code></pre></td>
 <td class="coverage"></td>
 </tr>
 <tr class="never">
@@ -170,12 +170,12 @@
 <tr class="covered">
 <td class="num">32</td>
 <td class="src"><pre><code class="objc">    public func get(url: URL, completion: @escaping NetworkEngineCompletionHandler) {</code></pre></td>
-<td class="coverage">2x</td>
+<td class="coverage">4x</td>
 </tr>
 <tr class="covered">
 <td class="num">33</td>
 <td class="src"><pre><code class="objc">        urlSession.dataTask(with: url) { data, _, error in</code></pre></td>
-<td class="coverage">2x</td>
+<td class="coverage">4x</td>
 </tr>
 <tr class="covered">
 <td class="num">34</td>
@@ -190,11 +190,11 @@
 <tr class="covered">
 <td class="num">36</td>
 <td class="src"><pre><code class="objc">    }</code></pre></td>
-<td class="coverage">2x</td>
+<td class="coverage">4x</td>
 </tr>
 <tr class="never">
 <td class="num">37</td>
-<td class="src"><pre><code class="objc">    </code></pre></td>
+<td class="src"><pre><code class="objc"></code></pre></td>
 <td class="coverage"></td>
 </tr>
 <tr class="never">
@@ -225,36 +225,31 @@
 <tr class="covered">
 <td class="num">43</td>
 <td class="src"><pre><code class="objc">    public func post(request: URLRequest, completion: @escaping NetworkEngineCompletionHandler) {</code></pre></td>
-<td class="coverage">3x</td>
+<td class="coverage">2x</td>
 </tr>
 <tr class="covered">
 <td class="num">44</td>
 <td class="src"><pre><code class="objc">        urlSession.dataTask(with: request) { (data, _, error) in</code></pre></td>
-<td class="coverage">3x</td>
+<td class="coverage">2x</td>
 </tr>
-<tr class="missed">
+<tr class="covered">
 <td class="num">45</td>
 <td class="src"><pre><code class="objc">            completion(data, error)</code></pre></td>
-<td class="coverage">!</td>
+<td class="coverage">1x</td>
 </tr>
-<tr class="missed">
+<tr class="covered">
 <td class="num">46</td>
 <td class="src"><pre><code class="objc">        }.resume()</code></pre></td>
-<td class="coverage">!</td>
+<td class="coverage">1x</td>
 </tr>
 <tr class="covered">
 <td class="num">47</td>
 <td class="src"><pre><code class="objc">    }</code></pre></td>
-<td class="coverage">3x</td>
+<td class="coverage">2x</td>
 </tr>
 <tr class="never">
 <td class="num">48</td>
 <td class="src"><pre><code class="objc">}</code></pre></td>
-<td class="coverage"></td>
-</tr>
-<tr class="never">
-<td class="num">49</td>
-<td class="src"><pre><code class="objc"></code></pre></td>
 <td class="coverage"></td>
 </tr>
 </table>
