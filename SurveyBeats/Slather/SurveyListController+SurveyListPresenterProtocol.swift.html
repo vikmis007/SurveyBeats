@@ -9,7 +9,7 @@
 <h2 class="cov_title">
 <span>Coverage for "SurveyListController+SurveyListPresenterProtocol.swift" : </span><span class="cov_high">100.00%</span>
 </h2>
-<h4 class="cov_subtitle">(21 of 21 relevant lines covered)</h4>
+<h4 class="cov_subtitle">(25 of 25 relevant lines covered)</h4>
 <h4 class="cov_filepath">SurveyBeats/Extensions/SurveyListController+SurveyListPresenterProtocol.swift</h4>
 <table class="source_code">
 <tr class="never">
@@ -104,7 +104,7 @@
 </tr>
 <tr class="never">
 <td class="num">19</td>
-<td class="src"><pre><code class="objc">    </code></pre></td>
+<td class="src"><pre><code class="objc"></code></pre></td>
 <td class="coverage"></td>
 </tr>
 <tr class="covered">
@@ -114,81 +114,101 @@
 </tr>
 <tr class="covered">
 <td class="num">21</td>
-<td class="src"><pre><code class="objc">        let alert = UIAlertController(title: SBStringConstants.kEmptyString, message: SBStringConstants.kGenericErrorMessage, preferredStyle: .alert)</code></pre></td>
+<td class="src"><pre><code class="objc">        let alert = UIAlertController(</code></pre></td>
 <td class="coverage">1x</td>
 </tr>
 <tr class="covered">
 <td class="num">22</td>
-<td class="src"><pre><code class="objc">        let okAction = UIAlertAction(title: SBStringConstants.kOkTitleString, style: .default, handler: nil)</code></pre></td>
+<td class="src"><pre><code class="objc">            title: SBStringConstants.kEmptyString,</code></pre></td>
 <td class="coverage">1x</td>
 </tr>
 <tr class="covered">
 <td class="num">23</td>
-<td class="src"><pre><code class="objc">        alert.addAction(okAction)</code></pre></td>
+<td class="src"><pre><code class="objc">            message: SBStringConstants.kGenericErrorMessage,</code></pre></td>
 <td class="coverage">1x</td>
 </tr>
 <tr class="covered">
 <td class="num">24</td>
-<td class="src"><pre><code class="objc">        self.present(alert, animated: true, completion: nil)</code></pre></td>
+<td class="src"><pre><code class="objc">            preferredStyle: .alert</code></pre></td>
 <td class="coverage">1x</td>
 </tr>
 <tr class="covered">
 <td class="num">25</td>
+<td class="src"><pre><code class="objc">        )</code></pre></td>
+<td class="coverage">1x</td>
+</tr>
+<tr class="covered">
+<td class="num">26</td>
+<td class="src"><pre><code class="objc">        let okAction = UIAlertAction(title: SBStringConstants.kOkTitleString, style: .default, handler: nil)</code></pre></td>
+<td class="coverage">1x</td>
+</tr>
+<tr class="covered">
+<td class="num">27</td>
+<td class="src"><pre><code class="objc">        alert.addAction(okAction)</code></pre></td>
+<td class="coverage">1x</td>
+</tr>
+<tr class="covered">
+<td class="num">28</td>
+<td class="src"><pre><code class="objc">        self.present(alert, animated: true, completion: nil)</code></pre></td>
+<td class="coverage">1x</td>
+</tr>
+<tr class="covered">
+<td class="num">29</td>
 <td class="src"><pre><code class="objc">    }</code></pre></td>
 <td class="coverage">1x</td>
 </tr>
 <tr class="never">
-<td class="num">26</td>
-<td class="src"><pre><code class="objc">    </code></pre></td>
+<td class="num">30</td>
+<td class="src"><pre><code class="objc"></code></pre></td>
 <td class="coverage"></td>
 </tr>
 <tr class="covered">
-<td class="num">27</td>
+<td class="num">31</td>
 <td class="src"><pre><code class="objc">    func showLoadingIndicator(_ shouldShow: Bool) {</code></pre></td>
 <td class="coverage">7x</td>
 </tr>
 <tr class="covered">
-<td class="num">28</td>
+<td class="num">32</td>
 <td class="src"><pre><code class="objc">        if shouldShow {</code></pre></td>
 <td class="coverage">7x</td>
 </tr>
 <tr class="covered">
-<td class="num">29</td>
+<td class="num">33</td>
 <td class="src"><pre><code class="objc">            showLoadingIndicator()</code></pre></td>
 <td class="coverage">5x</td>
 </tr>
 <tr class="covered">
-<td class="num">30</td>
+<td class="num">34</td>
 <td class="src"><pre><code class="objc">            navigationItem.leftBarButtonItem?.isEnabled = false</code></pre></td>
 <td class="coverage">5x</td>
 </tr>
 <tr class="covered">
-<td class="num">31</td>
+<td class="num">35</td>
 <td class="src"><pre><code class="objc">        } else {</code></pre></td>
 <td class="coverage">7x</td>
 </tr>
 <tr class="covered">
-<td class="num">32</td>
+<td class="num">36</td>
 <td class="src"><pre><code class="objc">            hideLoadingIndicator()</code></pre></td>
 <td class="coverage">2x</td>
 </tr>
 <tr class="covered">
-<td class="num">33</td>
+<td class="num">37</td>
 <td class="src"><pre><code class="objc">            navigationItem.leftBarButtonItem?.isEnabled = true</code></pre></td>
 <td class="coverage">2x</td>
 </tr>
 <tr class="covered">
-<td class="num">34</td>
+<td class="num">38</td>
 <td class="src"><pre><code class="objc">        }</code></pre></td>
 <td class="coverage">7x</td>
 </tr>
 <tr class="covered">
-<td class="num">35</td>
+<td class="num">39</td>
 <td class="src"><pre><code class="objc">    }</code></pre></td>
 <td class="coverage">7x</td>
 </tr>
 <tr class="never">
-<td class="num">36</td>
+<td class="num">40</td>
 <td class="src"><pre><code class="objc">}</code></pre></td>
 <td class="coverage"></td>
 </tr>

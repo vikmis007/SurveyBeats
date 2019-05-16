@@ -10,9 +10,9 @@ import UIKit
 import MBProgressHUD
 import CMPageControl
 
-let SURVEY_LIST_CELL_IDENTIFIER = "SurveyListCollectionViewCellIdentifier"
-let SURVEY_LIST_CELL_NAME = "SurveyListCollectionViewCell"
-let TAKE_SURVEY_IDENTIFIER = "SBTakeSurveyViewControllerIdentifier"
+let surveyListCellIdentifier = "SurveyListCollectionViewCellIdentifier"
+let surveyListCellName = "SurveyListCollectionViewCell"
+let takeSurveyControllerIdentifier = "SBTakeSurveyViewControllerIdentifier"
 
 class SBSurveyListViewController: UIViewController {
 
@@ -46,7 +46,14 @@ class SBSurveyListViewController: UIViewController {
     }
 
     func configurePageControl() {
-        pageControl = CMPageControl(frame: CGRect(x: view.bounds.size.width - 20, y: 10, width: 30, height: view.bounds.size.height - 20))
+        pageControl = CMPageControl(
+            frame: CGRect(
+                x: view.bounds.size.width - 20,
+                y: 10,
+                width: 30,
+                height: view.bounds.size.height - 20
+            )
+        )
         pageControl?.elementBackgroundColor = UIColor.clear
         pageControl?.isUserInteractionEnabled = false
         pageControl?.numberOfElements = 0
@@ -70,7 +77,10 @@ class SBSurveyListViewController: UIViewController {
     func configureCollectionView() {
         collectionView.delegate = self
         collectionView.dataSource = self
-        collectionView.register(UINib(nibName: SURVEY_LIST_CELL_NAME, bundle: nil), forCellWithReuseIdentifier: SURVEY_LIST_CELL_IDENTIFIER)
+        collectionView.register(
+            UINib(nibName: surveyListCellName, bundle: nil),
+            forCellWithReuseIdentifier: surveyListCellIdentifier
+        )
     }
 
     private func configurePresenter() {

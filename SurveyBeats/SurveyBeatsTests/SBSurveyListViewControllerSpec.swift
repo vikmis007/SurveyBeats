@@ -6,7 +6,7 @@
 //  Copyright © 2019 Exercise. All rights reserved.
 //
 
-let TEST_CONTROLLER_IDENTIFIER = "SBSurveyListViewControllerIdentifier"
+let testControllerIdentifier = "SBSurveyListViewControllerIdentifier"
 
 import UIKit
 
@@ -134,7 +134,7 @@ class SBSurveyListViewControllerSpec: QuickSpec {
             name: "Main",
             bundle: nil)
             .instantiateViewController(
-                withIdentifier: TEST_CONTROLLER_IDENTIFIER)
+                withIdentifier: testControllerIdentifier)
             as? SBSurveyListViewController
         UIApplication.shared.keyWindow!.rootViewController = systemUnderTest
     }

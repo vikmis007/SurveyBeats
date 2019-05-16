@@ -24,6 +24,12 @@ platform :ios do
        code_coverage: true,
        device: "iPhone 6s",
    )
+   swiftlint(
+      mode: :lint,      # SwiftLint mode: :lint (default) or :autocorrect
+      output_file: "LintReport.html",   # The path of the output file (optional)
+      reporter: "html",
+      ignore_exit_status: true    # Allow fastlane to continue even if SwiftLint returns a non-zero exit status
+  )
     slather(
        input_format: "auto",
        scheme: "SurveyBeats",
