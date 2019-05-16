@@ -61,3 +61,9 @@ Model–view–presenter (MVP) is a derivation of the model–view–controller 
 ## Unit tests
 1. Open `SurveyBeats.xcworkspace` that should start in Xcode.
 2. Press `command+u` to run the unit test in Xcode.
+
+## Contributors
+* Vikas Mishra
+
+## License
+This project is distributed under MIT license. See [LICENSE](https://github.com/vikmis007/SurveyBeats/LICENSE) for more information.
