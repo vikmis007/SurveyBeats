@@ -13,12 +13,12 @@ protocol SurveyListPresenterProtocol: class {
     ///
     /// - Parameter forecastList: array of forecast model data
     func reloadViewWithSurveyItemList(_ surveyList: [SurveyType])
-    
+
     /// To show error when API request fails
     ///
     /// - Parameter error: error received
     func failedToLoadSurveyItemList(_ error: Error?)
-    
+
     /// Toggle loading indicator on API request
     ///
     /// - Parameter shouldShow: show/hide loading indicator

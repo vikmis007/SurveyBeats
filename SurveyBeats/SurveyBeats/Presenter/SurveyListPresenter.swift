@@ -8,29 +8,27 @@
 
 import UIKit
 
-
 class SurveyListPresenter: NSObject {
     lazy private var surveyListService: SurveyListService = SurveyListService()
-    
+
     /// Delegate property for ForecastListPresenterProtocol
     weak var delegate: SurveyListPresenterProtocol?
-    
+
     /// convenience initilizer
     convenience init(urlSession: SBURLSession?) {
         self.init()
         surveyListService = SurveyListService(urlSession: urlSession)
     }
-    
-    
+
     /// Method to load data from API endpoint
     func loadSurveyList() {
         delegate?.showLoadingIndicator(true)
-        
+
         surveyListService.fetchSurveyFeed(completion: { [weak self] (surveyListItem) in
             DispatchQueue.main.async {
                 self?.delegate?.showLoadingIndicator(false)
             }
-            
+
             switch surveyListItem {
             case .success(let surveyFeedList):
                 DispatchQueue.main.async {

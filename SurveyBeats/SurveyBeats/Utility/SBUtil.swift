@@ -9,20 +9,19 @@
 import Foundation
 
 class SBUtil {
-    static func getPostRequestStringForFormData(params:[String: Any]) -> String {
+    static func getPostRequestStringForFormData(params: [String: Any]) -> String {
         var data = [String]()
-        for(key, value) in params
-        {
+        for(key, value) in params {
             data.append(key + "=\(value)")
         }
         return data.map { String($0) }.joined(separator: "&")
     }
-    
+
     static func setAccessToken(token: String?) {
         UserDefaults.standard.set(token, forKey: SBStringConstants.kAccessTokenKey)
-        
+
     }
-    
+
     static func getAccessToken() -> String? {
         return UserDefaults.standard.value(forKey: SBStringConstants.kAccessTokenKey) as? String
     }

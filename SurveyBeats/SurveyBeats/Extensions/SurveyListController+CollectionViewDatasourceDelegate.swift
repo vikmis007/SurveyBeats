@@ -9,11 +9,11 @@
 import UIKit
 
 extension SBSurveyListViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
-    
+
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return surveyListItems.count
     }
-    
+
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell: SurveyListCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: SURVEY_LIST_CELL_IDENTIFIER, for: indexPath) as? SurveyListCollectionViewCell else {
             return UICollectionViewCell()
@@ -21,13 +21,13 @@ extension SBSurveyListViewController: UICollectionViewDataSource, UICollectionVi
         cell.updateCellRecordWith(survey: surveyListItems[indexPath.row])
         cell.delegate = self
         return cell
-        
+
     }
-    
+
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         updatePageControlCurrentIndex(Int(scrollView.contentOffset.y) / Int(scrollView.frame.height))
     }
-    
+
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: self.collectionView.bounds.width, height: self.collectionView.bounds.height)
     }

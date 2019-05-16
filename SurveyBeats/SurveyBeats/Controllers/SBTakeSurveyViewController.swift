@@ -9,7 +9,7 @@
 import UIKit
 
 class SBTakeSurveyViewController: UIViewController {
-    
+
     var surveyTitle: String?
 
     override func viewDidLoad() {
