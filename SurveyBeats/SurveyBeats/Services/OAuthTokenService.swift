@@ -8,16 +8,21 @@
 
 import UIKit
 
+// MARK: - Service Class to maintain OAuth Token
 class OAuthTokenService: NSObject {
 
-    /// API url component instance
+    /// OAuth API url component instance
     private var urlComponents: URLComponents!
 
+    /// Initializer method
     override init() {
         urlComponents = URLComponents(string: SBStringConstants.kEndPoint)!
         urlComponents.path = SBStringConstants.kTokenAPIPath
     }
 
+    /// This method will request access token using get request
+    ///
+    /// - Parameter completion: request completion block
     public func getAccessToken(completion: @escaping (String?) -> Void) {
         guard let url = urlComponents.url else {
             completion(nil)

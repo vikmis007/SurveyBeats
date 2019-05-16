@@ -9,7 +9,6 @@
 let testControllerIdentifier = "SBSurveyListViewControllerIdentifier"
 
 import UIKit
-
 import Quick
 import Nimble
 
@@ -19,7 +18,7 @@ class SBSurveyListViewControllerSpec: QuickSpec {
     /// ListTableView controller instance
     private var systemUnderTest: SBSurveyListViewController!
 
-    /// Array to hold most popular articles from stub
+    /// Array to hold SurveyType model objects from stub
     private var surveyListItems: [SurveyType]!
 
     /// Success URL for mocking API
@@ -38,7 +37,7 @@ class SBSurveyListViewControllerSpec: QuickSpec {
 
         describe("Load Survey list") {
 
-            // Test loading of most popular articles
+            // Test loading of survey list items
             context("loading", closure: {
 
                 // Test for successful loading
@@ -51,7 +50,7 @@ class SBSurveyListViewControllerSpec: QuickSpec {
         }
     }
 
-    /// This mwthod will test failure of aricle loading
+    /// This mwthod will test failure of survey list loading
     private func executeTestSuiteForSurveyListLoadingFailure() {
 
         it("failed", closure: {
@@ -92,7 +91,7 @@ class SBSurveyListViewControllerSpec: QuickSpec {
         })
     }
 
-    /// This mwthod will test success of aricle loading
+    /// This mwthod will test success of survey list loading
     private func executeTestSuiteForSurveyListLoadingSuccess() {
 
         it("success", closure: {
@@ -139,9 +138,9 @@ class SBSurveyListViewControllerSpec: QuickSpec {
         UIApplication.shared.keyWindow!.rootViewController = systemUnderTest
     }
 
-    /// Method to return failure URL for most popular articles.
+    /// Method to return URL for survey list API.
     ///
-    /// - Returns: URL for most popular article.
+    /// - Returns: URL .
     private func surveyListApiURL() -> URL? {
         var urlComponents = URLComponents(string: SBStringConstants.kEndPoint)!
         urlComponents.path = SBStringConstants.kSurveyListAPIPath

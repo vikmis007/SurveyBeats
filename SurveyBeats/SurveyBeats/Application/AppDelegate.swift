@@ -17,13 +17,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         _ application: UIApplication,
         didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?
         ) -> Bool {
+
+        // Change navigation bar tint color throughout the app
         UINavigationBar.appearance().barTintColor = UIColor(
             red: 15.0/255.0, green: 21.0/255.0, blue: 40.0/255.0, alpha: 1.0
         )
+
+        // Change navigation bar item's color throughout the app
         UINavigationBar.appearance().tintColor = UIColor.white
+
+        // Change navigation bar text color throughout the app
         UINavigationBar.appearance().titleTextAttributes = [
             NSAttributedString.Key.foregroundColor: UIColor.white
         ]
+
+        // Change navigation bar button's tint color throughout the app
         UIBarButtonItem.appearance().tintColor = UIColor.white
         return true
     }
