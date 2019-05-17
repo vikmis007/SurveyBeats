@@ -52,15 +52,18 @@ Model–view–presenter (MVP) is a derivation of the model–view–controller 
 ## Testing, Linting reports using fastlane
 1. Navigate to project root directory.  
 2. Install [fastlane](https://docs.fastlane.tools/getting-started/ios/setup/), [Slather](https://github.com/SlatherOrg/slather), [Swiftlint](https://github.com/realm/SwiftLint)
-3. Run `bundle exec fastlane development` on terminal.
-![fastlane screenshot](https://github.com/serveshwar/news-flash/blob/feature/most-popular-articles/Screenshots/Fastlane_Screenshot.png)
-4. Once fastlane finishes, check `Lint/LintReport.html` for swiftlint report.
-![Swiftlint report](https://github.com/serveshwar/news-flash/blob/feature/most-popular-articles/Screenshots/Swiftlint_Screenshot.png)
+3. Run `fastlane development` on terminal.
+4. Once fastlane finishes, check `LintReport.html` for swiftlint report.
+![Swiftlint report](https://github.com/vikmis007/SurveyBeats/blob/develop/blob/Lint_Report/Lint_report_screenshot.png)
 5. Check `Slather/index.html` for unit test code coverage.
-![Slather code coverage report](https://github.com/serveshwar/news-flash/blob/feature/most-popular-articles/Screenshots/Slather_Screenshot.png)
+![Slather code coverage report](https://github.com/vikmis007/SurveyBeats/blob/develop/blob/Code_Coverage/CodeCoverage_report_screenshot.png)
 
-## Unit tests and UI tests
-1. Open `NewsFlash.xcworkspace` that should start in Xcode.
+## Unit tests
+1. Open `SurveyBeats.xcworkspace` that should start in Xcode.
 2. Press `command+u` to run the unit test in Xcode.
-![UT](https://github.com/serveshwar/news-flash/blob/feature/most-popular-articles/Screenshots/TestCase_Screenshot.png)
-![Code Coverage](https://github.com/serveshwar/news-flash/blob/feature/most-popular-articles/Screenshots/CodeCoverage_Screenshot.png)
+
+## Contributors
+* Vikas Mishra
+
+## License
+This project is distributed under MIT license. See [LICENSE](https://github.com/vikmis007/SurveyBeats/LICENSE) for more information.
