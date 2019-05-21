@@ -9,7 +9,7 @@
 import Foundation
 
 // MARK: - Protocol for Survey list table view cell
-protocol SurveyListCollectionViewCellProtocol: class {
+protocol SBSurveyListCollectionViewCellProtocol: class {
 
     /// To notify controller that take survey has been triggered
     ///

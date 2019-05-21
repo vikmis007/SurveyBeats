@@ -9,10 +9,10 @@
 import UIKit
 
 /// Enum to provide formatted API response
-enum SurveyListFeedResult {
+enum SBSurveyListFeedResult {
 
     /// For successful fetching of survey
-    case success(surveyListData: [SurveyType])
+    case success(surveyListData: [SBSurveyType])
 
     /// For error while fetching of survey.
     /// - error: Error that occurred.
@@ -26,10 +26,10 @@ enum SurveyListFeedResult {
 }
 
 /// Typealias for API request completion
-typealias SurveyListFeedCompletionHandler = (_ result: SurveyListFeedResult) -> Void
+typealias SurveyListFeedCompletionHandler = (_ result: SBSurveyListFeedResult) -> Void
 
 // MARK: - Service class for maintaining survey list from API
-class SurveyListService: NSObject {
+class SBSurveyListService: NSObject {
 
     /// API url component instance
     private var urlComponents: URLComponents!
@@ -68,25 +68,25 @@ class SurveyListService: NSObject {
 
         if let feedURL = self.urlComponents.url {
 
-            NetworkEngine(urlSession: self.urlSession).get(url: feedURL, completion: { (data, error) in
+            SBNetworkEngine(urlSession: self.urlSession).get(url: feedURL, completion: { (data, error) in
 
                 if error != nil {
-                    completion(SurveyListFeedResult.error(error: error!))
+                    completion(SBSurveyListFeedResult.error(error: error!))
                     return
                 }
 
                 do {
                     if let data = data {
                         let decoder = JSONDecoder()
-                        let surveyFeedList = try decoder.decode([SurveyType].self, from: data)
-                        completion(SurveyListFeedResult.success(surveyListData: surveyFeedList))
+                        let surveyFeedList = try decoder.decode([SBSurveyType].self, from: data)
+                        completion(SBSurveyListFeedResult.success(surveyListData: surveyFeedList))
                     }
                 } catch {
-                    completion(SurveyListFeedResult.error(error: error))
+                    completion(SBSurveyListFeedResult.error(error: error))
                 }
             })
         } else {
-            completion(SurveyListFeedResult.invalidURL)
+            completion(SBSurveyListFeedResult.invalidURL)
         }
 
     }
@@ -101,12 +101,12 @@ class SurveyListService: NSObject {
         var accessToken: String? = SBUtil.getAccessToken()
 
         if accessToken == nil {
-            let authService = OAuthTokenService()
+            let authService = SBOAuthTokenService()
             authService.getAccessToken { (token) in
                 accessToken = token
 
                 if accessToken == nil {
-                    completion(SurveyListFeedResult.unknownError)
+                    completion(SBSurveyListFeedResult.unknownError)
                 } else {
                     self.fetchSurveyFeedWith(token: accessToken!, completion: completion)
                 }

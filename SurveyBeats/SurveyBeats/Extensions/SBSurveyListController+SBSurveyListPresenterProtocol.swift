@@ -9,8 +9,8 @@
 import Foundation
 import UIKit
 
-extension SBSurveyListViewController: SurveyListPresenterProtocol {
-    func reloadViewWithSurveyItemList(_ surveyList: [SurveyType]) {
+extension SBSurveyListViewController: SBSurveyListPresenterProtocol {
+    func reloadViewWithSurveyItemList(_ surveyList: [SBSurveyType]) {
         surveyListItems = surveyList
         collectionView.reloadData()
         pageControl?.numberOfElements = surveyListItems.count

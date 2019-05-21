@@ -9,7 +9,7 @@
 import UIKit
 
 // MARK: - Service Class to maintain OAuth Token
-class OAuthTokenService: NSObject {
+class SBOAuthTokenService: NSObject {
 
     /// OAuth API url component instance
     private var urlComponents: URLComponents!
@@ -40,7 +40,7 @@ class OAuthTokenService: NSObject {
         let postString = SBUtil.getPostRequestStringForFormData(params: postParam)
         tokenRequest.httpBody = postString.data(using: .utf8)
 
-        NetworkEngine(urlSession: nil).post(request: tokenRequest) { (data, error) in
+        SBNetworkEngine(urlSession: nil).post(request: tokenRequest) { (data, error) in
             if error != nil {
                 completion(nil)
             }

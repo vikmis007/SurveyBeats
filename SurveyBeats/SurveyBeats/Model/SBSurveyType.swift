@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct SurveyType: Decodable {
+struct SBSurveyType: Decodable {
     /// Title of the survey
     let title: String?
 

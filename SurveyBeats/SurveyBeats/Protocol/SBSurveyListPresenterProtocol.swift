@@ -9,12 +9,12 @@
 import Foundation
 
 // MARK: - Protocol for Survey list controller's presenter
-protocol SurveyListPresenterProtocol: class {
+protocol SBSurveyListPresenterProtocol: class {
 
     /// To reload view with new data on API success
     ///
     /// - Parameter surveyList: array of SurveyType model data
-    func reloadViewWithSurveyItemList(_ surveyList: [SurveyType])
+    func reloadViewWithSurveyItemList(_ surveyList: [SBSurveyType])
 
     /// To show error when API request fails
     ///

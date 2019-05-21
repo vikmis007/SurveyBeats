@@ -21,10 +21,10 @@ extension SBSurveyListViewController: UICollectionViewDataSource,
     func collectionView(
         _ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath
         ) -> UICollectionViewCell {
-        guard let cell: SurveyListCollectionViewCell = collectionView.dequeueReusableCell(
+        guard let cell: SBSurveyListCollectionViewCell = collectionView.dequeueReusableCell(
             withReuseIdentifier: surveyListCellIdentifier,
             for: indexPath
-            ) as? SurveyListCollectionViewCell else {
+            ) as? SBSurveyListCollectionViewCell else {
             return UICollectionViewCell()
         }
         cell.updateCellRecordWith(survey: surveyListItems[indexPath.row])
