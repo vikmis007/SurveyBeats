@@ -15,12 +15,4 @@ target 'SurveyBeats' do
     pod 'Nimble'
   end
 
-  target 'SurveyBeatsUITests' do
-    inherit! :search_paths
-    use_frameworks!
-    pod 'SDWebImage'
-    pod 'MBProgressHUD', '~> 1.1.0'
-    pod 'CMPageControl'
-  end
-
 end
