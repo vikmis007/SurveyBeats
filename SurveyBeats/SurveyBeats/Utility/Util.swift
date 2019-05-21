@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import SwiftKeychainWrapper
 
 // MARK: - Utility class
 class Util {
@@ -23,18 +24,18 @@ class Util {
         return data.map { String($0) }.joined(separator: "&")
     }
 
-    /// This method will set access token in user defaults
+    /// This method will set access token in Keychain
     ///
     /// - Parameter token: token to be saved
     static func setAccessToken(token: String?) {
-        UserDefaults.standard.set(token, forKey: StringConstants.kAccessTokenKey)
-
+        guard let _ = token else { return }
+        KeychainWrapper.standard.set(token!, forKey: StringConstants.kAccessTokenKey)
     }
 
-    /// This method will get access token from user defaults
+    /// This method will get access token from Keychain
     ///
     /// - Returns: token string
     static func getAccessToken() -> String? {
-        return UserDefaults.standard.value(forKey: StringConstants.kAccessTokenKey) as? String
+        return KeychainWrapper.standard.string(forKey: StringConstants.kAccessTokenKey)
     }
 }
