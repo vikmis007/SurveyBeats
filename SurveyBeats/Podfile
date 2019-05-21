@@ -7,6 +7,7 @@ target 'SurveyBeats' do
   pod 'SDWebImage'
   pod 'MBProgressHUD', '~> 1.1.0'
   pod 'CMPageControl'
+  pod 'SwiftKeychainWrapper'
   # Pods for SurveyBeats
 
   target 'SurveyBeatsTests' do
