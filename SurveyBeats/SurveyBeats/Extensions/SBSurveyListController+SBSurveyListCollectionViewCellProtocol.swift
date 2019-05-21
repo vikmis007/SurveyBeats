@@ -8,7 +8,7 @@
 
 import Foundation
 
-extension SBSurveyListViewController: SurveyListCollectionViewCellProtocol {
+extension SBSurveyListViewController: SBSurveyListCollectionViewCellProtocol {
     func didTapTakeSurveyWith(title: String) {
         guard let takeSurveyViewController: SBTakeSurveyViewController =
             storyboard?.instantiateViewController(withIdentifier: takeSurveyControllerIdentifier)

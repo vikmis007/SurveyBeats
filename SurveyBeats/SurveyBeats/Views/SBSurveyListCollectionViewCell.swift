@@ -10,7 +10,7 @@ import UIKit
 import SDWebImage
 
 // MARK: - Survey list collection view cell class
-class SurveyListCollectionViewCell: UICollectionViewCell {
+class SBSurveyListCollectionViewCell: UICollectionViewCell {
 
     // MARK: - IBOutlets here
     @IBOutlet weak var coverImage: UIImageView!
@@ -20,7 +20,7 @@ class SurveyListCollectionViewCell: UICollectionViewCell {
 
     // MARK: - Instance variables here
     /// Cell protocol delegate property
-    weak var delegate: SurveyListCollectionViewCellProtocol!
+    weak var delegate: SBSurveyListCollectionViewCellProtocol!
 
     // MARK: - Life cycle mthods
     override func awakeFromNib() {
@@ -42,7 +42,7 @@ class SurveyListCollectionViewCell: UICollectionViewCell {
     /// This method will update cell data based on model object
     ///
     /// - Parameter survey: SurveyType model object
-    func updateCellRecordWith(survey: SurveyType) {
+    func updateCellRecordWith(survey: SBSurveyType) {
         titleLabel.text = survey.title
         descriptionLabel.text = survey.description
         if let urlString = survey.coverImageUrl {
