@@ -13,7 +13,7 @@
         <!--Survey List View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="SBSurveyListViewControllerIdentifier" id="BYZ-38-t0r" customClass="SBSurveyListViewController" customModule="SurveyBeats" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SurveyListViewControllerIdentifier" id="BYZ-38-t0r" customClass="SurveyListViewController" customModule="SurveyBeats" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -58,7 +58,7 @@
         <!--Take Survey View Controller-->
         <scene sceneID="cdO-Ir-BQy">
             <objects>
-                <viewController storyboardIdentifier="SBTakeSurveyViewControllerIdentifier" id="Qzs-Ee-wHB" customClass="SBTakeSurveyViewController" customModule="SurveyBeats" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TakeSurveyViewControllerIdentifier" id="Qzs-Ee-wHB" customClass="TakeSurveyViewController" customModule="SurveyBeats" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="TEO-EW-yYc">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

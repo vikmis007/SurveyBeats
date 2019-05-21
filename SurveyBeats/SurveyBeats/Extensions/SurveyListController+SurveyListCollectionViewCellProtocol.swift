@@ -8,11 +8,11 @@
 
 import Foundation
 
-extension SBSurveyListViewController: SBSurveyListCollectionViewCellProtocol {
-    func didTapTakeSurveyWith(title: String) {
-        guard let takeSurveyViewController: SBTakeSurveyViewController =
+extension SurveyListViewController: SurveyListCollectionViewCellProtocol {
+    func didTapTakeSurveyWithTitle(_ title: String) {
+        guard let takeSurveyViewController: TakeSurveyViewController =
             storyboard?.instantiateViewController(withIdentifier: takeSurveyControllerIdentifier)
-                as? SBTakeSurveyViewController else { return }
+                as? TakeSurveyViewController else { return }
         takeSurveyViewController.surveyTitle = title
         self.navigationController?.show(takeSurveyViewController, sender: nil)
     }

@@ -9,10 +9,10 @@
 import Foundation
 
 // MARK: - Protocol for Survey list table view cell
-protocol SBSurveyListCollectionViewCellProtocol: class {
+protocol SurveyListCollectionViewCellProtocol: class {
 
     /// To notify controller that take survey has been triggered
     ///
     /// - Parameter title: title of the survey
-    func didTapTakeSurveyWith(title: String)
+    func didTapTakeSurveyWithTitle(_ title: String)
 }

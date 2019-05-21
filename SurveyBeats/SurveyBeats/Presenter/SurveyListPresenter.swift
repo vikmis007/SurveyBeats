@@ -9,19 +9,19 @@
 import UIKit
 
 // MARK: - SurveyListController's presenter class
-class SBSurveyListPresenter: NSObject {
+class SurveyListPresenter: NSObject {
 
     // MARK: - Instance variables
     /// Survey list service class' instance
-    lazy private var surveyListService: SBSurveyListService = SBSurveyListService()
+    lazy private var surveyListService: SurveyListService = SurveyListService()
 
     /// Delegate property for SurveyListPresenterProtocol
-    weak var delegate: SBSurveyListPresenterProtocol?
+    weak var delegate: SurveyListPresenterProtocol?
 
     /// convenience initilizer
     convenience init(urlSession: SBURLSession?) {
         self.init()
-        surveyListService = SBSurveyListService(urlSession: urlSession)
+        surveyListService = SurveyListService(urlSession: urlSession)
     }
 
     /// Method to load data from API endpoint

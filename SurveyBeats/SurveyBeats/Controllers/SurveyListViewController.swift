@@ -1,5 +1,5 @@
 //
-//  SBSurveyListViewController.swift
+//  SurveyListViewController.swift
 //  SurveyBeats
 //
 //  Created by Vikasmishra on 15/05/19.
@@ -11,12 +11,12 @@ import MBProgressHUD
 import CMPageControl
 
 // MARK: - XIB Identifiers
-let surveyListCellIdentifier = "SBSurveyListCollectionViewCellIdentifier"
-let surveyListCellName = "SBSurveyListCollectionViewCell"
-let takeSurveyControllerIdentifier = "SBTakeSurveyViewControllerIdentifier"
+let surveyListCellIdentifier = "SurveyListCollectionViewCellIdentifier"
+let surveyListCellName = "SurveyListCollectionViewCell"
+let takeSurveyControllerIdentifier = "TakeSurveyViewControllerIdentifier"
 
 // MARK: - Class to show list of surveys
-class SBSurveyListViewController: UIViewController {
+class SurveyListViewController: UIViewController {
 
     // MARK: - IBOutlets
     @IBOutlet weak var collectionView: UICollectionView!
@@ -24,10 +24,10 @@ class SBSurveyListViewController: UIViewController {
 
     // MARK: - Instance variables
     /// Presenter instance
-    private var presenter: SBSurveyListPresenter!
+    private var presenter: SurveyListPresenter!
 
     /// array of model object to hold survey list
-    lazy var surveyListItems: [SBSurveyType] = [SBSurveyType]()
+    lazy var surveyListItems: [SurveyType] = [SurveyType]()
 
     /// To be injected in API call
     var urlSesssion: SBURLSession?
@@ -94,7 +94,7 @@ class SBSurveyListViewController: UIViewController {
 
     /// To configure presenter
     private func configurePresenter() {
-        presenter =  SBSurveyListPresenter(urlSession: urlSesssion)
+        presenter =  SurveyListPresenter(urlSession: urlSesssion)
         presenter.delegate = self
     }
 

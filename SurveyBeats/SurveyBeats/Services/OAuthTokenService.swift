@@ -9,15 +9,15 @@
 import UIKit
 
 // MARK: - Service Class to maintain OAuth Token
-class SBOAuthTokenService: NSObject {
+class OAuthTokenService: NSObject {
 
     /// OAuth API url component instance
     private var urlComponents: URLComponents!
 
     /// Initializer method
     override init() {
-        urlComponents = URLComponents(string: SBStringConstants.kEndPoint)!
-        urlComponents.path = SBStringConstants.kTokenAPIPath
+        urlComponents = URLComponents(string: StringConstants.kEndPoint)!
+        urlComponents.path = StringConstants.kTokenAPIPath
     }
 
     /// This method will request access token using get request
@@ -29,18 +29,18 @@ class SBOAuthTokenService: NSObject {
             return
         }
         var tokenRequest = URLRequest(url: url)
-        tokenRequest.httpMethod = SBStringConstants.kHTTPMethodPost
+        tokenRequest.httpMethod = StringConstants.kHTTPMethodPost
 
         let postParam = [
-            SBStringConstants.kUserNameKey: SBStringConstants.kUserNameValue,
-            SBStringConstants.kPasswordKey: SBStringConstants.kPasswordValue,
-            SBStringConstants.kGrantTypeKey: SBStringConstants.kGrantTypeValue
+            StringConstants.kUserNameKey: StringConstants.kUserNameValue,
+            StringConstants.kPasswordKey: StringConstants.kPasswordValue,
+            StringConstants.kGrantTypeKey: StringConstants.kGrantTypeValue
         ]
 
-        let postString = SBUtil.getPostRequestStringForFormData(params: postParam)
+        let postString = Util.getPostRequestStringForFormData(params: postParam)
         tokenRequest.httpBody = postString.data(using: .utf8)
 
-        SBNetworkEngine(urlSession: nil).post(request: tokenRequest) { (data, error) in
+        NetworkEngine(urlSession: nil).post(request: tokenRequest) { (data, error) in
             if error != nil {
                 completion(nil)
             }
@@ -48,7 +48,7 @@ class SBOAuthTokenService: NSObject {
                 if let data = data,
                     let json = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any],
                     let token = json["access_token"] as? String {
-                    SBUtil.setAccessToken(token: token)
+                    Util.setAccessToken(token: token)
                     completion(token)
                 } else {
                     completion(nil)

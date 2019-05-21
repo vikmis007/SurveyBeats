@@ -6,7 +6,7 @@
 //  Copyright © 2019 Exercise. All rights reserved.
 //
 
-let testControllerIdentifier = "SBSurveyListViewControllerIdentifier"
+let testControllerIdentifier = "SurveyListViewControllerIdentifier"
 
 import UIKit
 import Quick
@@ -14,9 +14,9 @@ import Nimble
 
 @testable import SurveyBeats
 
-class SBSurveyListViewControllerSpec: QuickSpec {
+class SurveyListViewControllerSpec: QuickSpec {
     /// ListTableView controller instance
-    private var systemUnderTest: SBSurveyListViewController!
+    private var systemUnderTest: SurveyListViewController!
 
     /// Array to hold SurveyType model objects from stub
     private var surveyListItems: [SurveyType]!
@@ -84,9 +84,9 @@ class SBSurveyListViewControllerSpec: QuickSpec {
 
             let sessionMock = URLSessionMock(data: data, response: urlResponse, error: error)
             self.systemUnderTest.urlSesssion = sessionMock
-            SBUtil.setAccessToken(token: "dummy")
+            Util.setAccessToken(token: "dummy")
             self.systemUnderTest.initialSetup()
-            SBUtil.setAccessToken(token: nil)
+            Util.setAccessToken(token: nil)
             expect((self.systemUnderTest.error as NSError?)?.code ?? 400).toEventually(equal(400))
         })
     }
@@ -121,9 +121,9 @@ class SBSurveyListViewControllerSpec: QuickSpec {
             let sessionMock = URLSessionMock(data: data, response: urlResponse, error: nil)
             self.systemUnderTest.urlSesssion = sessionMock
 
-            SBUtil.setAccessToken(token: "dummy")
+            Util.setAccessToken(token: "dummy")
             self.systemUnderTest.initialSetup()
-            SBUtil.setAccessToken(token: nil)
+            Util.setAccessToken(token: nil)
             expect(self.systemUnderTest.surveyListItems.count).toEventually(equal(5))
         })
     }
@@ -134,7 +134,7 @@ class SBSurveyListViewControllerSpec: QuickSpec {
             bundle: nil)
             .instantiateViewController(
                 withIdentifier: testControllerIdentifier)
-            as? SBSurveyListViewController
+            as? SurveyListViewController
         UIApplication.shared.keyWindow!.rootViewController = systemUnderTest
     }
 
@@ -142,9 +142,9 @@ class SBSurveyListViewControllerSpec: QuickSpec {
     ///
     /// - Returns: URL .
     private func surveyListApiURL() -> URL? {
-        var urlComponents = URLComponents(string: SBStringConstants.kEndPoint)!
-        urlComponents.path = SBStringConstants.kSurveyListAPIPath
-        urlComponents.queryItems = [URLQueryItem(name: SBStringConstants.kAccessTokenKey,
+        var urlComponents = URLComponents(string: StringConstants.kEndPoint)!
+        urlComponents.path = StringConstants.kSurveyListAPIPath
+        urlComponents.queryItems = [URLQueryItem(name: StringConstants.kAccessTokenKey,
                                                  value: "dummy_access_token")]
         return urlComponents.url
     }

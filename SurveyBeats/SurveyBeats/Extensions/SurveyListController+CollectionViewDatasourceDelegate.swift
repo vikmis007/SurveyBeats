@@ -8,7 +8,7 @@
 
 import UIKit
 
-extension SBSurveyListViewController: UICollectionViewDataSource,
+extension SurveyListViewController: UICollectionViewDataSource,
                                 UICollectionViewDelegate,
                         UICollectionViewDelegateFlowLayout {
 
@@ -21,10 +21,10 @@ extension SBSurveyListViewController: UICollectionViewDataSource,
     func collectionView(
         _ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath
         ) -> UICollectionViewCell {
-        guard let cell: SBSurveyListCollectionViewCell = collectionView.dequeueReusableCell(
+        guard let cell: SurveyListCollectionViewCell = collectionView.dequeueReusableCell(
             withReuseIdentifier: surveyListCellIdentifier,
             for: indexPath
-            ) as? SBSurveyListCollectionViewCell else {
+            ) as? SurveyListCollectionViewCell else {
             return UICollectionViewCell()
         }
         cell.updateCellRecordWith(survey: surveyListItems[indexPath.row])

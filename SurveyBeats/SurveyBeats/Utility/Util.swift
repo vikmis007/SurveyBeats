@@ -1,5 +1,5 @@
 //
-//  SBUtil.swift
+//  Util.swift
 //  SurveyBeats
 //
 //  Created by Vikasmishra on 14/05/19.
@@ -9,7 +9,7 @@
 import Foundation
 
 // MARK: - Utility class
-class SBUtil {
+class Util {
 
     /// Get string formatted form data from dictionary
     ///
@@ -27,7 +27,7 @@ class SBUtil {
     ///
     /// - Parameter token: token to be saved
     static func setAccessToken(token: String?) {
-        UserDefaults.standard.set(token, forKey: SBStringConstants.kAccessTokenKey)
+        UserDefaults.standard.set(token, forKey: StringConstants.kAccessTokenKey)
 
     }
 
@@ -35,6 +35,6 @@ class SBUtil {
     ///
     /// - Returns: token string
     static func getAccessToken() -> String? {
-        return UserDefaults.standard.value(forKey: SBStringConstants.kAccessTokenKey) as? String
+        return UserDefaults.standard.value(forKey: StringConstants.kAccessTokenKey) as? String
     }
 }

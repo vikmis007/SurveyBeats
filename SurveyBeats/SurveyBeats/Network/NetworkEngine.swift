@@ -12,7 +12,7 @@ import Foundation
 typealias NetworkEngineCompletionHandler = (_ data: Data?, _ error: Error?) -> Void
 
 /// This is a factory class to handle API calls
-final class SBNetworkEngine: NSObject {
+final class NetworkEngine: NSObject {
 
     /// To create a url session for API call
     private var urlSession: SBURLSession!
