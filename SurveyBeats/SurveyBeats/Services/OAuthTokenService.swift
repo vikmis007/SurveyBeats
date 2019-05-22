@@ -12,7 +12,7 @@ import UIKit
 class OAuthTokenService {
 
     /// OAuth API url component instance
-    private var urlComponents: URLComponents!
+    private var urlComponents: URLComponents
 
     /// Initializer method
     init() {

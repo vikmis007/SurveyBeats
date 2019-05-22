@@ -15,7 +15,7 @@ typealias NetworkEngineCompletionHandler = (_ data: Data?, _ error: Error?) -> V
 final class NetworkEngine {
 
     /// To create a url session for API call
-    private var urlSession: SBURLSession!
+    private let urlSession: SBURLSession
 
     /// To initialise network engine with url session
     ///
