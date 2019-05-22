@@ -1,5 +1,5 @@
 //
-//  SBSurveyListViewController.swift
+//  SurveyListViewController.swift
 //  SurveyBeats
 //
 //  Created by Vikasmishra on 15/05/19.
@@ -13,10 +13,10 @@ import CMPageControl
 // MARK: - XIB Identifiers
 let surveyListCellIdentifier = "SurveyListCollectionViewCellIdentifier"
 let surveyListCellName = "SurveyListCollectionViewCell"
-let takeSurveyControllerIdentifier = "SBTakeSurveyViewControllerIdentifier"
+let takeSurveyControllerIdentifier = "TakeSurveyViewControllerIdentifier"
 
 // MARK: - Class to show list of surveys
-class SBSurveyListViewController: UIViewController {
+class SurveyListViewController: UIViewController {
 
     // MARK: - IBOutlets
     @IBOutlet weak var collectionView: UICollectionView!

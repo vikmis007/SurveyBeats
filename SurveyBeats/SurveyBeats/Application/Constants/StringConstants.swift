@@ -1,5 +1,5 @@
 //
-//  SBStringConstants.swift
+//  StringConstants.swift
 //  SurveyBeats
 //
 //  Created by Vikasmishra on 14/05/19.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct SBStringConstants {
+struct StringConstants {
 
     // API endpoint url
     static let kEndPoint = "https://nimble-survey-api.herokuapp.com"

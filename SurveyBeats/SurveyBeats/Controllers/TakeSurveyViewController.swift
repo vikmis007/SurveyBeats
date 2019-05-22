@@ -1,5 +1,5 @@
 //
-//  SBTakeSurveyViewController.swift
+//  TakeSurveyViewController.swift
 //  SurveyBeats
 //
 //  Created by Vikasmishra on 15/05/19.
@@ -9,7 +9,7 @@
 import UIKit
 
 // MARK: - Class to show details of survey
-class SBTakeSurveyViewController: UIViewController {
+class TakeSurveyViewController: UIViewController {
 
     // MARK: - Instance variables
     /// To hold survey title injected from survey list page

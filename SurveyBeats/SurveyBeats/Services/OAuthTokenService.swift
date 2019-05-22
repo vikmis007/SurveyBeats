@@ -16,8 +16,8 @@ class OAuthTokenService: NSObject {
 
     /// Initializer method
     override init() {
-        urlComponents = URLComponents(string: SBStringConstants.kEndPoint)!
-        urlComponents.path = SBStringConstants.kTokenAPIPath
+        urlComponents = URLComponents(string: StringConstants.kEndPoint)!
+        urlComponents.path = StringConstants.kTokenAPIPath
     }
 
     /// This method will request access token using get request
@@ -29,15 +29,15 @@ class OAuthTokenService: NSObject {
             return
         }
         var tokenRequest = URLRequest(url: url)
-        tokenRequest.httpMethod = SBStringConstants.kHTTPMethodPost
+        tokenRequest.httpMethod = StringConstants.kHTTPMethodPost
 
         let postParam = [
-            SBStringConstants.kUserNameKey: SBStringConstants.kUserNameValue,
-            SBStringConstants.kPasswordKey: SBStringConstants.kPasswordValue,
-            SBStringConstants.kGrantTypeKey: SBStringConstants.kGrantTypeValue
+            StringConstants.kUserNameKey: StringConstants.kUserNameValue,
+            StringConstants.kPasswordKey: StringConstants.kPasswordValue,
+            StringConstants.kGrantTypeKey: StringConstants.kGrantTypeValue
         ]
 
-        let postString = SBUtil.getPostRequestStringForFormData(params: postParam)
+        let postString = Util.getPostRequestStringForFormData(params: postParam)
         tokenRequest.httpBody = postString.data(using: .utf8)
 
         NetworkEngine(urlSession: nil).post(request: tokenRequest) { (data, error) in
@@ -48,7 +48,7 @@ class OAuthTokenService: NSObject {
                 if let data = data,
                     let json = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any],
                     let token = json["access_token"] as? String {
-                    SBUtil.setAccessToken(token: token)
+                    Util.setAccessToken(token: token)
                     completion(token)
                 } else {
                     completion(nil)

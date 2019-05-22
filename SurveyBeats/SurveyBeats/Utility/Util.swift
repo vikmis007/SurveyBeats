@@ -1,5 +1,5 @@
 //
-//  SBUtil.swift
+//  Util.swift
 //  SurveyBeats
 //
 //  Created by Vikasmishra on 14/05/19.
@@ -7,9 +7,10 @@
 //
 
 import Foundation
+import SwiftKeychainWrapper
 
 // MARK: - Utility class
-class SBUtil {
+class Util {
 
     /// Get string formatted form data from dictionary
     ///
@@ -23,18 +24,18 @@ class SBUtil {
         return data.map { String($0) }.joined(separator: "&")
     }
 
-    /// This method will set access token in user defaults
+    /// This method will set access token in Keychain
     ///
     /// - Parameter token: token to be saved
     static func setAccessToken(token: String?) {
-        UserDefaults.standard.set(token, forKey: SBStringConstants.kAccessTokenKey)
-
+        guard let _ = token else { return }
+        KeychainWrapper.standard.set(token!, forKey: StringConstants.kAccessTokenKey)
     }
 
-    /// This method will get access token from user defaults
+    /// This method will get access token from Keychain
     ///
     /// - Returns: token string
     static func getAccessToken() -> String? {
-        return UserDefaults.standard.value(forKey: SBStringConstants.kAccessTokenKey) as? String
+        return KeychainWrapper.standard.string(forKey: StringConstants.kAccessTokenKey)
     }
 }

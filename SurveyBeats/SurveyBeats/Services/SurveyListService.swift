@@ -45,10 +45,10 @@ class SurveyListService: NSObject {
 
     /// Designated Initializer
     override init() {
-        urlComponents = URLComponents(string: SBStringConstants.kEndPoint)!
+        urlComponents = URLComponents(string: StringConstants.kEndPoint)!
         urlComponents.queryItems = [
             URLQueryItem(
-                name: SBStringConstants.kAccessTokenKey, value: ""
+                name: StringConstants.kAccessTokenKey, value: ""
             )
         ]
     }
@@ -62,7 +62,7 @@ class SurveyListService: NSObject {
 
         self.urlComponents.queryItems = [
             URLQueryItem(
-                name: SBStringConstants.kAccessTokenKey, value: token
+                name: StringConstants.kAccessTokenKey, value: token
             )
         ]
 
@@ -96,9 +96,9 @@ class SurveyListService: NSObject {
     /// - Parameter completion: Completion handler to pass data
     public func fetchSurveyFeed(completion: @escaping SurveyListFeedCompletionHandler) {
 
-        urlComponents.path = SBStringConstants.kSurveyListAPIPath
+        urlComponents.path = StringConstants.kSurveyListAPIPath
 
-        var accessToken: String? = SBUtil.getAccessToken()
+        var accessToken: String? = Util.getAccessToken()
 
         if accessToken == nil {
             let authService = OAuthTokenService()

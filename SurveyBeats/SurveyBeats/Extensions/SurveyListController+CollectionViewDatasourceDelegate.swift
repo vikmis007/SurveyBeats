@@ -8,7 +8,7 @@
 
 import UIKit
 
-extension SBSurveyListViewController: UICollectionViewDataSource,
+extension SurveyListViewController: UICollectionViewDataSource,
                                 UICollectionViewDelegate,
                         UICollectionViewDelegateFlowLayout {
 

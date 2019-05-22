@@ -17,18 +17,18 @@
 		B299C0D4228AA68000E2FB9A /* SurveyType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B299C0D3228AA68000E2FB9A /* SurveyType.swift */; };
 		B299C0D7228AA88A00E2FB9A /* SurveyListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B299C0D6228AA88A00E2FB9A /* SurveyListService.swift */; };
 		B299C0DA228AA8BB00E2FB9A /* OAuthTokenService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B299C0D9228AA8BB00E2FB9A /* OAuthTokenService.swift */; };
-		B299C0DC228AA96600E2FB9A /* SBStringConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B299C0DB228AA96600E2FB9A /* SBStringConstants.swift */; };
-		B299C0DF228AB11F00E2FB9A /* SBUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = B299C0DE228AB11F00E2FB9A /* SBUtil.swift */; };
+		B299C0DC228AA96600E2FB9A /* StringConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B299C0DB228AA96600E2FB9A /* StringConstants.swift */; };
+		B299C0DF228AB11F00E2FB9A /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = B299C0DE228AB11F00E2FB9A /* Util.swift */; };
 		B299C0E2228BD77D00E2FB9A /* SurveyListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B299C0E1228BD77D00E2FB9A /* SurveyListPresenter.swift */; };
 		B299C0E5228BDB0100E2FB9A /* SurveyListPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B299C0E4228BDB0100E2FB9A /* SurveyListPresenterProtocol.swift */; };
-		B299C0E8228BDD8900E2FB9A /* SBSurveyListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B299C0E7228BDD8900E2FB9A /* SBSurveyListViewController.swift */; };
+		B299C0E8228BDD8900E2FB9A /* SurveyListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B299C0E7228BDD8900E2FB9A /* SurveyListViewController.swift */; };
 		B299C0EA228BDF0500E2FB9A /* SurveyListController+SurveyListPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B299C0E9228BDF0500E2FB9A /* SurveyListController+SurveyListPresenterProtocol.swift */; };
 		B299C0EF228BF2A800E2FB9A /* SurveyListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B299C0ED228BF2A800E2FB9A /* SurveyListCollectionViewCell.swift */; };
 		B299C0F0228BF2A800E2FB9A /* SurveyListCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B299C0EE228BF2A800E2FB9A /* SurveyListCollectionViewCell.xib */; };
 		B299C0F3228BF66500E2FB9A /* SurveyListController+CollectionViewDatasourceDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B299C0F2228BF66500E2FB9A /* SurveyListController+CollectionViewDatasourceDelegate.swift */; };
 		B299C101228BFCE800E2FB9A /* SurveyListCollectionViewCellProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B299C100228BFCE800E2FB9A /* SurveyListCollectionViewCellProtocol.swift */; };
 		B299C103228BFD3900E2FB9A /* SurveyListController+SurveyListCollectionViewCellProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B299C102228BFD3900E2FB9A /* SurveyListController+SurveyListCollectionViewCellProtocol.swift */; };
-		B299C105228BFE6300E2FB9A /* SBTakeSurveyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B299C104228BFE6300E2FB9A /* SBTakeSurveyViewController.swift */; };
+		B299C105228BFE6300E2FB9A /* TakeSurveyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B299C104228BFE6300E2FB9A /* TakeSurveyViewController.swift */; };
 		B299C107228C1BC300E2FB9A /* SBSurveyListViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B299C106228C1BC300E2FB9A /* SBSurveyListViewControllerSpec.swift */; };
 		B299C10B228C1DEF00E2FB9A /* SurveyListSuccessData.json in Resources */ = {isa = PBXBuildFile; fileRef = B299C10A228C1DEF00E2FB9A /* SurveyListSuccessData.json */; };
 		B299C10D228C236700E2FB9A /* SurveyListFailureData.json in Resources */ = {isa = PBXBuildFile; fileRef = B299C10C228C236700E2FB9A /* SurveyListFailureData.json */; };
@@ -65,18 +65,18 @@
 		B299C0D3228AA68000E2FB9A /* SurveyType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyType.swift; sourceTree = "<group>"; };
 		B299C0D6228AA88A00E2FB9A /* SurveyListService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyListService.swift; sourceTree = "<group>"; };
 		B299C0D9228AA8BB00E2FB9A /* OAuthTokenService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OAuthTokenService.swift; sourceTree = "<group>"; };
-		B299C0DB228AA96600E2FB9A /* SBStringConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SBStringConstants.swift; sourceTree = "<group>"; };
-		B299C0DE228AB11F00E2FB9A /* SBUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SBUtil.swift; sourceTree = "<group>"; };
+		B299C0DB228AA96600E2FB9A /* StringConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringConstants.swift; sourceTree = "<group>"; };
+		B299C0DE228AB11F00E2FB9A /* Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
 		B299C0E1228BD77D00E2FB9A /* SurveyListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyListPresenter.swift; sourceTree = "<group>"; };
 		B299C0E4228BDB0100E2FB9A /* SurveyListPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyListPresenterProtocol.swift; sourceTree = "<group>"; };
-		B299C0E7228BDD8900E2FB9A /* SBSurveyListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SBSurveyListViewController.swift; sourceTree = "<group>"; };
+		B299C0E7228BDD8900E2FB9A /* SurveyListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyListViewController.swift; sourceTree = "<group>"; };
 		B299C0E9228BDF0500E2FB9A /* SurveyListController+SurveyListPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SurveyListController+SurveyListPresenterProtocol.swift"; sourceTree = "<group>"; };
 		B299C0ED228BF2A800E2FB9A /* SurveyListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyListCollectionViewCell.swift; sourceTree = "<group>"; };
 		B299C0EE228BF2A800E2FB9A /* SurveyListCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SurveyListCollectionViewCell.xib; sourceTree = "<group>"; };
 		B299C0F2228BF66500E2FB9A /* SurveyListController+CollectionViewDatasourceDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SurveyListController+CollectionViewDatasourceDelegate.swift"; sourceTree = "<group>"; };
 		B299C100228BFCE800E2FB9A /* SurveyListCollectionViewCellProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyListCollectionViewCellProtocol.swift; sourceTree = "<group>"; };
 		B299C102228BFD3900E2FB9A /* SurveyListController+SurveyListCollectionViewCellProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SurveyListController+SurveyListCollectionViewCellProtocol.swift"; sourceTree = "<group>"; };
-		B299C104228BFE6300E2FB9A /* SBTakeSurveyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SBTakeSurveyViewController.swift; sourceTree = "<group>"; };
+		B299C104228BFE6300E2FB9A /* TakeSurveyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakeSurveyViewController.swift; sourceTree = "<group>"; };
 		B299C106228C1BC300E2FB9A /* SBSurveyListViewControllerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SBSurveyListViewControllerSpec.swift; sourceTree = "<group>"; };
 		B299C10A228C1DEF00E2FB9A /* SurveyListSuccessData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = SurveyListSuccessData.json; sourceTree = "<group>"; };
 		B299C10C228C236700E2FB9A /* SurveyListFailureData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = SurveyListFailureData.json; sourceTree = "<group>"; };
@@ -169,8 +169,8 @@
 		B299C0C5228A910600E2FB9A /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				B299C0E7228BDD8900E2FB9A /* SBSurveyListViewController.swift */,
-				B299C104228BFE6300E2FB9A /* SBTakeSurveyViewController.swift */,
+				B299C0E7228BDD8900E2FB9A /* SurveyListViewController.swift */,
+				B299C104228BFE6300E2FB9A /* TakeSurveyViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -256,7 +256,7 @@
 		B299C0DD228AA96B00E2FB9A /* Constants */ = {
 			isa = PBXGroup;
 			children = (
-				B299C0DB228AA96600E2FB9A /* SBStringConstants.swift */,
+				B299C0DB228AA96600E2FB9A /* StringConstants.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -264,7 +264,7 @@
 		B299C0E0228AB12400E2FB9A /* Utility */ = {
 			isa = PBXGroup;
 			children = (
-				B299C0DE228AB11F00E2FB9A /* SBUtil.swift */,
+				B299C0DE228AB11F00E2FB9A /* Util.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -491,6 +491,7 @@
 				"${BUILT_PRODUCTS_DIR}/CMPageControl/CMPageControl.framework",
 				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftKeychainWrapper/SwiftKeychainWrapper.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
@@ -499,6 +500,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CMPageControl.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftKeychainWrapper.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -536,13 +538,13 @@
 			files = (
 				B299C101228BFCE800E2FB9A /* SurveyListCollectionViewCellProtocol.swift in Sources */,
 				B299C0D4228AA68000E2FB9A /* SurveyType.swift in Sources */,
-				B299C0E8228BDD8900E2FB9A /* SBSurveyListViewController.swift in Sources */,
+				B299C0E8228BDD8900E2FB9A /* SurveyListViewController.swift in Sources */,
 				B299C0DA228AA8BB00E2FB9A /* OAuthTokenService.swift in Sources */,
-				B299C0DC228AA96600E2FB9A /* SBStringConstants.swift in Sources */,
+				B299C0DC228AA96600E2FB9A /* StringConstants.swift in Sources */,
 				B299C0EA228BDF0500E2FB9A /* SurveyListController+SurveyListPresenterProtocol.swift in Sources */,
 				B299C103228BFD3900E2FB9A /* SurveyListController+SurveyListCollectionViewCellProtocol.swift in Sources */,
-				B299C0DF228AB11F00E2FB9A /* SBUtil.swift in Sources */,
-				B299C105228BFE6300E2FB9A /* SBTakeSurveyViewController.swift in Sources */,
+				B299C0DF228AB11F00E2FB9A /* Util.swift in Sources */,
+				B299C105228BFE6300E2FB9A /* TakeSurveyViewController.swift in Sources */,
 				B299C098228A908000E2FB9A /* AppDelegate.swift in Sources */,
 				B299C0E2228BD77D00E2FB9A /* SurveyListPresenter.swift in Sources */,
 				B299C0F3228BF66500E2FB9A /* SurveyListController+CollectionViewDatasourceDelegate.swift in Sources */,

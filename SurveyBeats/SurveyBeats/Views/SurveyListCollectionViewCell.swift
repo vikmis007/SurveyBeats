@@ -35,7 +35,7 @@ class SurveyListCollectionViewCell: UICollectionViewCell {
 
     // MARK: - IBActions here
     @IBAction func takeSurveyButtonTapped(_ sender: Any) {
-        delegate.didTapTakeSurveyWith(title: titleLabel.text ?? "")
+        delegate.didTapTakeSurveyWithTitle(titleLabel.text ?? "")
     }
 
     // MARK: - Helper methods
@@ -45,9 +45,11 @@ class SurveyListCollectionViewCell: UICollectionViewCell {
     func updateCellRecordWith(survey: SurveyType) {
         titleLabel.text = survey.title
         descriptionLabel.text = survey.description
-        if let urlString = survey.coverImageUrl,
-            let url = URL(string: urlString) {
-            coverImage.sd_setImage(with: url, completed: nil)
+        if let urlString = survey.coverImageUrl {
+            let highResolutionURLString = "\(urlString)l"
+            if let url = URL(string: highResolutionURLString) {
+                coverImage.sd_setImage(with: url, completed: nil)
+            }
         }
     }
 }

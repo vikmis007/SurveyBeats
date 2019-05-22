@@ -6,6 +6,7 @@ PODS:
   - SDWebImage (4.4.5):
     - SDWebImage/Core (= 4.4.5)
   - SDWebImage/Core (4.4.5)
+  - SwiftKeychainWrapper (3.2.0)
 
 DEPENDENCIES:
   - CMPageControl
@@ -13,6 +14,7 @@ DEPENDENCIES:
   - Nimble
   - Quick
   - SDWebImage
+  - SwiftKeychainWrapper
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -21,6 +23,7 @@ SPEC REPOS:
     - Nimble
     - Quick
     - SDWebImage
+    - SwiftKeychainWrapper
 
 SPEC CHECKSUMS:
   CMPageControl: 63c66975d32b4f9e32634824dc62a3fa544e6767
@@ -28,7 +31,8 @@ SPEC CHECKSUMS:
   Nimble: 051e3d8912d40138fa5591c78594f95fb172af37
   Quick: f4f7f063c524394c73ed93ac70983c609805d481
   SDWebImage: ecc03494e973b93b80213649d32175f8d2d17d4d
+  SwiftKeychainWrapper: 82c4c02cdc36f9a24f7edfcaab3e336401caa1a1
 
-PODFILE CHECKSUM: 43d608f60c879d76575a8e930bc356dee0839e3d
+PODFILE CHECKSUM: d48e9c77828341483624eea448ef0181c64e59f6
 
 COCOAPODS: 1.6.1
