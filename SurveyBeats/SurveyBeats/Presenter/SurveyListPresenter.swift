@@ -9,7 +9,7 @@
 import UIKit
 
 // MARK: - SurveyListController's presenter class
-class SurveyListPresenter: NSObject {
+class SurveyListPresenter {
 
     // MARK: - Instance variables
     /// Survey list service class' instance
