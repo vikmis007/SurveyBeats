@@ -8,6 +8,10 @@
 
 import UIKit
 
+// MARK: - Constants related to SurveyListService class
+// Survey list API path
+let kSurveyListAPIPath = "/surveys.json"
+
 /// Enum to provide formatted API response
 enum SurveyListFeedResult {
 
@@ -29,10 +33,10 @@ enum SurveyListFeedResult {
 typealias SurveyListFeedCompletionHandler = (_ result: SurveyListFeedResult) -> Void
 
 // MARK: - Service class for maintaining survey list from API
-class SurveyListService: NSObject {
+class SurveyListService {
 
     /// API url component instance
-    private var urlComponents: URLComponents!
+    private var urlComponents: URLComponents
 
     /// URLSession to be injected
     private var urlSession: SBURLSession?
@@ -44,7 +48,7 @@ class SurveyListService: NSObject {
     }
 
     /// Designated Initializer
-    override init() {
+    init() {
         urlComponents = URLComponents(string: StringConstants.kEndPoint)!
         urlComponents.queryItems = [
             URLQueryItem(
@@ -96,7 +100,7 @@ class SurveyListService: NSObject {
     /// - Parameter completion: Completion handler to pass data
     public func fetchSurveyFeed(completion: @escaping SurveyListFeedCompletionHandler) {
 
-        urlComponents.path = StringConstants.kSurveyListAPIPath
+        urlComponents.path = kSurveyListAPIPath
 
         var accessToken: String? = Util.getAccessToken()
 
