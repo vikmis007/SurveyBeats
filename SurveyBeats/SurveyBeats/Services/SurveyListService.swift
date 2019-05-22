@@ -29,7 +29,7 @@ enum SurveyListFeedResult {
 typealias SurveyListFeedCompletionHandler = (_ result: SurveyListFeedResult) -> Void
 
 // MARK: - Service class for maintaining survey list from API
-class SurveyListService: NSObject {
+class SurveyListService {
 
     /// API url component instance
     private var urlComponents: URLComponents!
@@ -44,7 +44,7 @@ class SurveyListService: NSObject {
     }
 
     /// Designated Initializer
-    override init() {
+    init() {
         urlComponents = URLComponents(string: StringConstants.kEndPoint)!
         urlComponents.queryItems = [
             URLQueryItem(

@@ -9,13 +9,13 @@
 import UIKit
 
 // MARK: - Service Class to maintain OAuth Token
-class OAuthTokenService: NSObject {
+class OAuthTokenService {
 
     /// OAuth API url component instance
     private var urlComponents: URLComponents!
 
     /// Initializer method
-    override init() {
+    init() {
         urlComponents = URLComponents(string: StringConstants.kEndPoint)!
         urlComponents.path = StringConstants.kTokenAPIPath
     }
