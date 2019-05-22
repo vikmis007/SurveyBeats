@@ -32,7 +32,7 @@ typealias SurveyListFeedCompletionHandler = (_ result: SurveyListFeedResult) -> 
 class SurveyListService {
 
     /// API url component instance
-    private var urlComponents: URLComponents!
+    private var urlComponents: URLComponents
 
     /// URLSession to be injected
     private var urlSession: SBURLSession?
