@@ -8,6 +8,10 @@
 
 import UIKit
 
+// MARK: - Constants related to SurveyListService class
+// Survey list API path
+let kSurveyListAPIPath = "/surveys.json"
+
 /// Enum to provide formatted API response
 enum SurveyListFeedResult {
 
@@ -96,7 +100,7 @@ class SurveyListService {
     /// - Parameter completion: Completion handler to pass data
     public func fetchSurveyFeed(completion: @escaping SurveyListFeedCompletionHandler) {
 
-        urlComponents.path = StringConstants.kSurveyListAPIPath
+        urlComponents.path = kSurveyListAPIPath
 
         var accessToken: String? = Util.getAccessToken()
 

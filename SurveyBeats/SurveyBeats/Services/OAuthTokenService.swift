@@ -8,6 +8,20 @@
 
 import UIKit
 
+// MARK: - Constants related to OAuthTokenService class
+// Token API path
+let kTokenAPIPath = "/oauth/token"
+
+// Body params keys to be passed in API request
+let kUserNameKey = "username"
+let kPasswordKey = "password"
+let kGrantTypeKey = "grant_type"
+
+// Body params values to be passed in API request
+let kUserNameValue = "carlos@nimbl3.com"
+let kPasswordValue = "antikera"
+let kGrantTypeValue = "password"
+
 // MARK: - Service Class to maintain OAuth Token
 class OAuthTokenService {
 
@@ -17,7 +31,7 @@ class OAuthTokenService {
     /// Initializer method
     init() {
         urlComponents = URLComponents(string: StringConstants.kEndPoint)!
-        urlComponents.path = StringConstants.kTokenAPIPath
+        urlComponents.path = kTokenAPIPath
     }
 
     /// This method will request access token using get request
@@ -32,9 +46,9 @@ class OAuthTokenService {
         tokenRequest.httpMethod = StringConstants.kHTTPMethodPost
 
         let postParam = [
-            StringConstants.kUserNameKey: StringConstants.kUserNameValue,
-            StringConstants.kPasswordKey: StringConstants.kPasswordValue,
-            StringConstants.kGrantTypeKey: StringConstants.kGrantTypeValue
+            kUserNameKey: kUserNameValue,
+            kPasswordKey: kPasswordValue,
+            kGrantTypeKey: kGrantTypeValue
         ]
 
         let postString = Util.getPostRequestStringForFormData(params: postParam)
@@ -47,7 +61,7 @@ class OAuthTokenService {
             do {
                 if let data = data,
                     let json = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any],
-                    let token = json["access_token"] as? String {
+                    let token = json[StringConstants.kAccessTokenKey] as? String {
                     Util.setAccessToken(token: token)
                     completion(token)
                 } else {
